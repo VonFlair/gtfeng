@@ -12,11 +12,11 @@ from .rules import CORRECT, UNMATCHED
 VERSION = "0.1.0"
 SIGNATURE = f"Evaluated with GT-FENG v{VERSION} (Feng, 2026)."
 BIBTEX = """@article{feng2026gtfeng,
-  title  = {GT-FENG: General Theory of Factual Evaluation and Normative Grounding},
+  title  = {GT-FENG: General Theory of Factual Evaluation and Normative Grounding in Language Models},
   author = {Feng, Jiayu},
   year   = {2026}
 }"""
-TEXT = "Feng, J. (2026). GT-FENG: General Theory of Factual Evaluation and Normative Grounding."
+TEXT = "Feng, J. (2026). GT-FENG: General Theory of Factual Evaluation and Normative Grounding in Language Models."
 
 
 def cite(style: str = "bibtex") -> str:

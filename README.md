@@ -74,7 +74,7 @@ The test suite checks that the output equals the paper's Table 3.
 
 ```bibtex
 @article{feng2026gtfeng,
-  title  = {GT-FENG: General Theory of Factual Evaluation and Normative Grounding},
+  title  = {GT-FENG: General Theory of Factual Evaluation and Normative Grounding in Language Models},
   author = {Feng, Jiayu},
   year   = {2026}
 }
