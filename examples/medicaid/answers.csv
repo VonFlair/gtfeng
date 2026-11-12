@@ -1,0 +1,613 @@
+model,quantity,jurisdiction,time,definition,repeat,answer
+claude-sonnet-5-5,pregnancy,Alabama,2025,canon,1,146.0
+claude-sonnet-5-5,pregnancy,Alaska,2025,canon,1,205.0
+claude-sonnet-5-5,pregnancy,Arizona,2025,canon,1,156.0
+claude-sonnet-5-5,pregnancy,Arkansas,2025,canon,1,214.0
+claude-sonnet-5-5,pregnancy,California,2025,canon,1,322.0
+claude-sonnet-5-5,pregnancy,Colorado,2025,canon,1,205.0
+claude-sonnet-5-5,pregnancy,Connecticut,2025,canon,1,263.0
+claude-sonnet-5-5,pregnancy,Delaware,2025,canon,1,218.0
+claude-sonnet-5-5,pregnancy,District of Columbia,2025,canon,1,324.0
+claude-sonnet-5-5,pregnancy,Florida,2025,canon,1,196.0
+claude-sonnet-5-5,pregnancy,Georgia,2025,canon,1,225.0
+claude-sonnet-5-5,pregnancy,Hawaii,2025,canon,1,202.0
+claude-sonnet-5-5,pregnancy,Idaho,2025,canon,1,138.0
+claude-sonnet-5-5,pregnancy,Illinois,2025,canon,1,213.0
+claude-sonnet-5-5,pregnancy,Indiana,2025,canon,1,218.0
+claude-sonnet-5-5,pregnancy,Iowa,2025,canon,1,380.0
+claude-sonnet-5-5,pregnancy,Kansas,2025,canon,1,171.0
+claude-sonnet-5-5,pregnancy,Kentucky,2025,canon,1,205.0
+claude-sonnet-5-5,pregnancy,Louisiana,2025,canon,1,138.0
+claude-sonnet-5-5,pregnancy,Maine,2025,canon,1,214.0
+claude-sonnet-5-5,pregnancy,Maryland,2025,canon,1,264.0
+claude-sonnet-5-5,pregnancy,Massachusetts,2025,canon,1,205.0
+claude-sonnet-5-5,pregnancy,Michigan,2025,canon,1,202.0
+claude-sonnet-5-5,pregnancy,Minnesota,2025,canon,1,283.0
+claude-sonnet-5-5,pregnancy,Mississippi,2025,canon,1,199.0
+claude-sonnet-5-5,pregnancy,Missouri,2025,canon,1,305.0
+claude-sonnet-5-5,pregnancy,Montana,2025,canon,1,162.0
+claude-sonnet-5-5,pregnancy,Nebraska,2025,canon,1,202.0
+claude-sonnet-5-5,pregnancy,Nevada,2025,canon,1,165.0
+claude-sonnet-5-5,pregnancy,New Hampshire,2025,canon,1,201.0
+claude-sonnet-5-5,pregnancy,New Jersey,2025,canon,1,205.0
+claude-sonnet-5-5,pregnancy,New Mexico,2025,canon,1,138.0
+claude-sonnet-5-5,pregnancy,New York,2025,canon,1,223.0
+claude-sonnet-5-5,pregnancy,North Carolina,2025,canon,1,199.0
+claude-sonnet-5-5,pregnancy,North Dakota,2025,canon,1,167.0
+claude-sonnet-5-5,pregnancy,Ohio,2025,canon,1,205.0
+claude-sonnet-5-5,pregnancy,Oklahoma,2025,canon,1,138.0
+claude-sonnet-5-5,pregnancy,Oregon,2025,canon,1,190.0
+claude-sonnet-5-5,pregnancy,Pennsylvania,2025,canon,1,220.0
+claude-sonnet-5-5,pregnancy,Rhode Island,2025,canon,1,253.0
+claude-sonnet-5-5,pregnancy,South Carolina,2025,canon,1,199.0
+claude-sonnet-5-5,pregnancy,South Dakota,2025,canon,1,138.0
+claude-sonnet-5-5,pregnancy,Tennessee,2025,canon,1,205.0
+claude-sonnet-5-5,pregnancy,Texas,2025,canon,1,207.0
+claude-sonnet-5-5,pregnancy,Utah,2025,canon,1,144.0
+claude-sonnet-5-5,pregnancy,Vermont,2025,canon,1,213.0
+claude-sonnet-5-5,pregnancy,Virginia,2025,canon,1,205.0
+claude-sonnet-5-5,pregnancy,Washington,2025,canon,1,198.0
+claude-sonnet-5-5,pregnancy,West Virginia,2025,canon,1,163.0
+claude-sonnet-5-5,pregnancy,Wisconsin,2025,canon,1,306.0
+claude-sonnet-5-5,pregnancy,Wyoming,2025,canon,1,159.0
+claude-sonnet-5-5,infant,Alabama,2025,canon,1,146.0
+claude-sonnet-5-5,infant,Alaska,2025,canon,1,208.0
+claude-sonnet-5-5,infant,Arizona,2025,canon,1,147.0
+claude-sonnet-5-5,infant,Arkansas,2025,canon,1,216.0
+claude-sonnet-5-5,infant,California,2025,canon,1,322.0
+claude-sonnet-5-5,infant,Colorado,2025,canon,1,265.0
+claude-sonnet-5-5,infant,Connecticut,2025,canon,1,323.0
+claude-sonnet-5-5,infant,Delaware,2025,canon,1,217.0
+claude-sonnet-5-5,infant,District of Columbia,2025,canon,1,324.0
+claude-sonnet-5-5,infant,Florida,2025,canon,1,214.0
+claude-sonnet-5-5,infant,Georgia,2025,canon,1,247.0
+claude-sonnet-5-5,infant,Hawaii,2025,canon,1,313.0
+claude-sonnet-5-5,infant,Idaho,2025,canon,1,190.0
+claude-sonnet-5-5,infant,Illinois,2025,canon,1,318.0
+claude-sonnet-5-5,infant,Indiana,2025,canon,1,223.0
+claude-sonnet-5-5,infant,Iowa,2025,canon,1,380.0
+claude-sonnet-5-5,infant,Kansas,2025,canon,1,238.0
+claude-sonnet-5-5,infant,Kentucky,2025,canon,1,213.0
+claude-sonnet-5-5,infant,Louisiana,2025,canon,1,214.0
+claude-sonnet-5-5,infant,Maine,2025,canon,1,213.0
+claude-sonnet-5-5,infant,Maryland,2025,canon,1,327.0
+claude-sonnet-5-5,infant,Massachusetts,2025,canon,1,305.0
+claude-sonnet-5-5,infant,Michigan,2025,canon,1,217.0
+claude-sonnet-5-5,infant,Minnesota,2025,canon,1,283.0
+claude-sonnet-5-5,infant,Mississippi,2025,canon,1,207.0
+claude-sonnet-5-5,infant,Missouri,2025,canon,1,305.0
+claude-sonnet-5-5,infant,Montana,2025,canon,1,266.0
+claude-sonnet-5-5,infant,Nebraska,2025,canon,1,218.0
+claude-sonnet-5-5,infant,Nevada,2025,canon,1,165.0
+claude-sonnet-5-5,infant,New Hampshire,2025,canon,1,323.0
+claude-sonnet-5-5,infant,New Jersey,2025,canon,1,199.0
+claude-sonnet-5-5,infant,New Mexico,2025,canon,1,309.0
+claude-sonnet-5-5,infant,New York,2025,canon,1,223.0
+claude-sonnet-5-5,infant,North Carolina,2025,canon,1,216.0
+claude-sonnet-5-5,infant,North Dakota,2025,canon,1,175.0
+claude-sonnet-5-5,infant,Ohio,2025,canon,1,213.0
+claude-sonnet-5-5,infant,Oklahoma,2025,canon,1,205.0
+claude-sonnet-5-5,infant,Oregon,2025,canon,1,305.0
+claude-sonnet-5-5,infant,Pennsylvania,2025,canon,1,319.0
+claude-sonnet-5-5,infant,Rhode Island,2025,canon,1,267.0
+claude-sonnet-5-5,infant,South Carolina,2025,canon,1,199.0
+claude-sonnet-5-5,infant,South Dakota,2025,canon,1,209.0
+claude-sonnet-5-5,infant,Tennessee,2025,canon,1,255.0
+claude-sonnet-5-5,infant,Texas,2025,canon,1,205.0
+claude-sonnet-5-5,infant,Utah,2025,canon,1,205.0
+claude-sonnet-5-5,infant,Vermont,2025,canon,1,317.0
+claude-sonnet-5-5,infant,Virginia,2025,canon,1,209.0
+claude-sonnet-5-5,infant,Washington,2025,canon,1,215.0
+claude-sonnet-5-5,infant,West Virginia,2025,canon,1,305.0
+claude-sonnet-5-5,infant,Wisconsin,2025,canon,1,306.0
+claude-sonnet-5-5,infant,Wyoming,2025,canon,1,160.0
+claude-sonnet-5-5,parent_caretaker,Alabama,2025,canon,1,18.0
+claude-sonnet-5-5,parent_caretaker,Alaska,2025,canon,1,123.0
+claude-sonnet-5-5,parent_caretaker,Arizona,2025,canon,1,106.0
+claude-sonnet-5-5,parent_caretaker,Arkansas,2025,canon,1,16.0
+claude-sonnet-5-5,parent_caretaker,California,2025,canon,1,138.0
+claude-sonnet-5-5,parent_caretaker,Colorado,2025,canon,1,138.0
+claude-sonnet-5-5,parent_caretaker,Connecticut,2025,canon,1,155.0
+claude-sonnet-5-5,parent_caretaker,Delaware,2025,canon,1,87.0
+claude-sonnet-5-5,parent_caretaker,District of Columbia,2025,canon,1,221.0
+claude-sonnet-5-5,parent_caretaker,Florida,2025,canon,1,31.0
+claude-sonnet-5-5,parent_caretaker,Georgia,2025,canon,1,29.0
+claude-sonnet-5-5,parent_caretaker,Hawaii,2025,canon,1,105.0
+claude-sonnet-5-5,parent_caretaker,Idaho,2025,canon,1,23.0
+claude-sonnet-5-5,parent_caretaker,Illinois,2025,canon,1,138.0
+claude-sonnet-5-5,parent_caretaker,Indiana,2025,canon,1,16.0
+claude-sonnet-5-5,parent_caretaker,Iowa,2025,canon,1,58.0
+claude-sonnet-5-5,parent_caretaker,Kansas,2025,canon,1,38.0
+claude-sonnet-5-5,parent_caretaker,Kentucky,2025,canon,1,27.0
+claude-sonnet-5-5,parent_caretaker,Louisiana,2025,canon,1,24.0
+claude-sonnet-5-5,parent_caretaker,Maine,2025,canon,1,105.0
+claude-sonnet-5-5,parent_caretaker,Maryland,2025,canon,1,123.0
+claude-sonnet-5-5,parent_caretaker,Massachusetts,2025,canon,1,133.0
+claude-sonnet-5-5,parent_caretaker,Michigan,2025,canon,1,54.0
+claude-sonnet-5-5,parent_caretaker,Minnesota,2025,canon,1,133.0
+claude-sonnet-5-5,parent_caretaker,Mississippi,2025,canon,1,27.0
+claude-sonnet-5-5,parent_caretaker,Missouri,2025,canon,1,18.0
+claude-sonnet-5-5,parent_caretaker,Montana,2025,canon,1,24.0
+claude-sonnet-5-5,parent_caretaker,Nebraska,2025,canon,1,58.0
+claude-sonnet-5-5,parent_caretaker,Nevada,2025,canon,1,29.0
+claude-sonnet-5-5,parent_caretaker,New Hampshire,2025,canon,1,37.0
+claude-sonnet-5-5,parent_caretaker,New Jersey,2025,canon,1,133.0
+claude-sonnet-5-5,parent_caretaker,New Mexico,2025,canon,1,138.0
+claude-sonnet-5-5,parent_caretaker,New York,2025,canon,1,138.0
+claude-sonnet-5-5,parent_caretaker,North Carolina,2025,canon,1,42.0
+claude-sonnet-5-5,parent_caretaker,North Dakota,2025,canon,1,52.0
+claude-sonnet-5-5,parent_caretaker,Ohio,2025,canon,1,90.0
+claude-sonnet-5-5,parent_caretaker,Oklahoma,2025,canon,1,41.0
+claude-sonnet-5-5,parent_caretaker,Oregon,2025,canon,1,38.0
+claude-sonnet-5-5,parent_caretaker,Pennsylvania,2025,canon,1,33.0
+claude-sonnet-5-5,parent_caretaker,Rhode Island,2025,canon,1,133.0
+claude-sonnet-5-5,parent_caretaker,South Carolina,2025,canon,1,67.0
+claude-sonnet-5-5,parent_caretaker,South Dakota,2025,canon,1,52.0
+claude-sonnet-5-5,parent_caretaker,Tennessee,2025,canon,1,98.0
+claude-sonnet-5-5,parent_caretaker,Texas,2025,canon,1,15.0
+claude-sonnet-5-5,parent_caretaker,Utah,2025,canon,1,43.0
+claude-sonnet-5-5,parent_caretaker,Vermont,2025,canon,1,138.0
+claude-sonnet-5-5,parent_caretaker,Virginia,2025,canon,1,38.0
+claude-sonnet-5-5,parent_caretaker,Washington,2025,canon,1,38.0
+claude-sonnet-5-5,parent_caretaker,West Virginia,2025,canon,1,32.0
+claude-sonnet-5-5,parent_caretaker,Wisconsin,2025,canon,1,100.0
+claude-sonnet-5-5,parent_caretaker,Wyoming,2025,canon,1,52.0
+claude-sonnet-5-5,pregnancy,Alabama,2025,canon,2,146.0
+claude-sonnet-5-5,pregnancy,Alaska,2025,canon,2,205.0
+claude-sonnet-5-5,pregnancy,Arizona,2025,canon,2,156.0
+claude-sonnet-5-5,pregnancy,Arkansas,2025,canon,2,214.0
+claude-sonnet-5-5,pregnancy,California,2025,canon,2,322.0
+claude-sonnet-5-5,pregnancy,Colorado,2025,canon,2,265.0
+claude-sonnet-5-5,pregnancy,Connecticut,2025,canon,2,263.0
+claude-sonnet-5-5,pregnancy,Delaware,2025,canon,2,223.0
+claude-sonnet-5-5,pregnancy,District of Columbia,2025,canon,2,324.0
+claude-sonnet-5-5,pregnancy,Florida,2025,canon,2,196.0
+claude-sonnet-5-5,pregnancy,Georgia,2025,canon,2,225.0
+claude-sonnet-5-5,pregnancy,Hawaii,2025,canon,2,196.0
+claude-sonnet-5-5,pregnancy,Idaho,2025,canon,2,138.0
+claude-sonnet-5-5,pregnancy,Illinois,2025,canon,2,213.0
+claude-sonnet-5-5,pregnancy,Indiana,2025,canon,2,218.0
+claude-sonnet-5-5,pregnancy,Iowa,2025,canon,2,380.0
+claude-sonnet-5-5,pregnancy,Kansas,2025,canon,2,171.0
+claude-sonnet-5-5,pregnancy,Kentucky,2025,canon,2,205.0
+claude-sonnet-5-5,pregnancy,Louisiana,2025,canon,2,138.0
+claude-sonnet-5-5,pregnancy,Maine,2025,canon,2,214.0
+claude-sonnet-5-5,pregnancy,Maryland,2025,canon,2,264.0
+claude-sonnet-5-5,pregnancy,Massachusetts,2025,canon,2,205.0
+claude-sonnet-5-5,pregnancy,Michigan,2025,canon,2,197.0
+claude-sonnet-5-5,pregnancy,Minnesota,2025,canon,2,278.0
+claude-sonnet-5-5,pregnancy,Mississippi,2025,canon,2,199.0
+claude-sonnet-5-5,pregnancy,Missouri,2025,canon,2,305.0
+claude-sonnet-5-5,pregnancy,Montana,2025,canon,2,162.0
+claude-sonnet-5-5,pregnancy,Nebraska,2025,canon,2,199.0
+claude-sonnet-5-5,pregnancy,Nevada,2025,canon,2,165.0
+claude-sonnet-5-5,pregnancy,New Hampshire,2025,canon,2,196.0
+claude-sonnet-5-5,pregnancy,New Jersey,2025,canon,2,205.0
+claude-sonnet-5-5,pregnancy,New Mexico,2025,canon,2,138.0
+claude-sonnet-5-5,pregnancy,New York,2025,canon,2,223.0
+claude-sonnet-5-5,pregnancy,North Carolina,2025,canon,2,199.0
+claude-sonnet-5-5,pregnancy,North Dakota,2025,canon,2,165.0
+claude-sonnet-5-5,pregnancy,Ohio,2025,canon,2,205.0
+claude-sonnet-5-5,pregnancy,Oklahoma,2025,canon,2,205.0
+claude-sonnet-5-5,pregnancy,Oregon,2025,canon,2,190.0
+claude-sonnet-5-5,pregnancy,Pennsylvania,2025,canon,2,220.0
+claude-sonnet-5-5,pregnancy,Rhode Island,2025,canon,2,263.0
+claude-sonnet-5-5,pregnancy,South Carolina,2025,canon,2,199.0
+claude-sonnet-5-5,pregnancy,South Dakota,2025,canon,2,138.0
+claude-sonnet-5-5,pregnancy,Tennessee,2025,canon,2,205.0
+claude-sonnet-5-5,pregnancy,Texas,2025,canon,2,207.0
+claude-sonnet-5-5,pregnancy,Utah,2025,canon,2,144.0
+claude-sonnet-5-5,pregnancy,Vermont,2025,canon,2,217.0
+claude-sonnet-5-5,pregnancy,Virginia,2025,canon,2,205.0
+claude-sonnet-5-5,pregnancy,Washington,2025,canon,2,198.0
+claude-sonnet-5-5,pregnancy,West Virginia,2025,canon,2,163.0
+claude-sonnet-5-5,pregnancy,Wisconsin,2025,canon,2,306.0
+claude-sonnet-5-5,pregnancy,Wyoming,2025,canon,2,159.0
+claude-sonnet-5-5,infant,Alabama,2025,canon,2,146.0
+claude-sonnet-5-5,infant,Alaska,2025,canon,2,208.0
+claude-sonnet-5-5,infant,Arizona,2025,canon,2,205.0
+claude-sonnet-5-5,infant,Arkansas,2025,canon,2,216.0
+claude-sonnet-5-5,infant,California,2025,canon,2,322.0
+claude-sonnet-5-5,infant,Colorado,2025,canon,2,265.0
+claude-sonnet-5-5,infant,Connecticut,2025,canon,2,323.0
+claude-sonnet-5-5,infant,Delaware,2025,canon,2,217.0
+claude-sonnet-5-5,infant,District of Columbia,2025,canon,2,324.0
+claude-sonnet-5-5,infant,Florida,2025,canon,2,211.0
+claude-sonnet-5-5,infant,Georgia,2025,canon,2,205.0
+claude-sonnet-5-5,infant,Hawaii,2025,canon,2,313.0
+claude-sonnet-5-5,infant,Idaho,2025,canon,2,190.0
+claude-sonnet-5-5,infant,Illinois,2025,canon,2,318.0
+claude-sonnet-5-5,infant,Indiana,2025,canon,2,278.0
+claude-sonnet-5-5,infant,Iowa,2025,canon,2,380.0
+claude-sonnet-5-5,infant,Kansas,2025,canon,2,238.0
+claude-sonnet-5-5,infant,Kentucky,2025,canon,2,218.0
+claude-sonnet-5-5,infant,Louisiana,2025,canon,2,214.0
+claude-sonnet-5-5,infant,Maine,2025,canon,2,213.0
+claude-sonnet-5-5,infant,Maryland,2025,canon,2,322.0
+claude-sonnet-5-5,infant,Massachusetts,2025,canon,2,205.0
+claude-sonnet-5-5,infant,Michigan,2025,canon,2,217.0
+claude-sonnet-5-5,infant,Minnesota,2025,canon,2,285.0
+claude-sonnet-5-5,infant,Mississippi,2025,canon,2,207.0
+claude-sonnet-5-5,infant,Missouri,2025,canon,2,305.0
+claude-sonnet-5-5,infant,Montana,2025,canon,2,266.0
+claude-sonnet-5-5,infant,Nebraska,2025,canon,2,197.0
+claude-sonnet-5-5,infant,Nevada,2025,canon,2,205.0
+claude-sonnet-5-5,infant,New Hampshire,2025,canon,2,323.0
+claude-sonnet-5-5,infant,New Jersey,2025,canon,2,199.0
+claude-sonnet-5-5,infant,New Mexico,2025,canon,2,305.0
+claude-sonnet-5-5,infant,New York,2025,canon,2,223.0
+claude-sonnet-5-5,infant,North Carolina,2025,canon,2,214.0
+claude-sonnet-5-5,infant,North Dakota,2025,canon,2,175.0
+claude-sonnet-5-5,infant,Ohio,2025,canon,2,213.0
+claude-sonnet-5-5,infant,Oklahoma,2025,canon,2,205.0
+claude-sonnet-5-5,infant,Oregon,2025,canon,2,305.0
+claude-sonnet-5-5,infant,Pennsylvania,2025,canon,2,220.0
+claude-sonnet-5-5,infant,Rhode Island,2025,canon,2,267.0
+claude-sonnet-5-5,infant,South Carolina,2025,canon,2,199.0
+claude-sonnet-5-5,infant,South Dakota,2025,canon,2,209.0
+claude-sonnet-5-5,infant,Tennessee,2025,canon,2,255.0
+claude-sonnet-5-5,infant,Texas,2025,canon,2,206.0
+claude-sonnet-5-5,infant,Utah,2025,canon,2,205.0
+claude-sonnet-5-5,infant,Vermont,2025,canon,2,317.0
+claude-sonnet-5-5,infant,Virginia,2025,canon,2,209.0
+claude-sonnet-5-5,infant,Washington,2025,canon,2,215.0
+claude-sonnet-5-5,infant,West Virginia,2025,canon,2,305.0
+claude-sonnet-5-5,infant,Wisconsin,2025,canon,2,308.0
+claude-sonnet-5-5,infant,Wyoming,2025,canon,2,160.0
+claude-sonnet-5-5,parent_caretaker,Alabama,2025,canon,2,18.0
+claude-sonnet-5-5,parent_caretaker,Alaska,2025,canon,2,127.0
+claude-sonnet-5-5,parent_caretaker,Arizona,2025,canon,2,106.0
+claude-sonnet-5-5,parent_caretaker,Arkansas,2025,canon,2,16.0
+claude-sonnet-5-5,parent_caretaker,California,2025,canon,2,138.0
+claude-sonnet-5-5,parent_caretaker,Colorado,2025,canon,2,138.0
+claude-sonnet-5-5,parent_caretaker,Connecticut,2025,canon,2,155.0
+claude-sonnet-5-5,parent_caretaker,Delaware,2025,canon,2,87.0
+claude-sonnet-5-5,parent_caretaker,District of Columbia,2025,canon,2,221.0
+claude-sonnet-5-5,parent_caretaker,Florida,2025,canon,2,31.0
+claude-sonnet-5-5,parent_caretaker,Georgia,2025,canon,2,31.0
+claude-sonnet-5-5,parent_caretaker,Hawaii,2025,canon,2,105.0
+claude-sonnet-5-5,parent_caretaker,Idaho,2025,canon,2,22.0
+claude-sonnet-5-5,parent_caretaker,Illinois,2025,canon,2,138.0
+claude-sonnet-5-5,parent_caretaker,Indiana,2025,canon,2,16.0
+claude-sonnet-5-5,parent_caretaker,Iowa,2025,canon,2,38.0
+claude-sonnet-5-5,parent_caretaker,Kansas,2025,canon,2,38.0
+claude-sonnet-5-5,parent_caretaker,Kentucky,2025,canon,2,23.0
+claude-sonnet-5-5,parent_caretaker,Louisiana,2025,canon,2,24.0
+claude-sonnet-5-5,parent_caretaker,Maine,2025,canon,2,105.0
+claude-sonnet-5-5,parent_caretaker,Maryland,2025,canon,2,123.0
+claude-sonnet-5-5,parent_caretaker,Massachusetts,2025,canon,2,133.0
+claude-sonnet-5-5,parent_caretaker,Michigan,2025,canon,2,54.0
+claude-sonnet-5-5,parent_caretaker,Minnesota,2025,canon,2,138.0
+claude-sonnet-5-5,parent_caretaker,Mississippi,2025,canon,2,27.0
+claude-sonnet-5-5,parent_caretaker,Missouri,2025,canon,2,18.0
+claude-sonnet-5-5,parent_caretaker,Montana,2025,canon,2,24.0
+claude-sonnet-5-5,parent_caretaker,Nebraska,2025,canon,2,58.0
+claude-sonnet-5-5,parent_caretaker,Nevada,2025,canon,2,29.0
+claude-sonnet-5-5,parent_caretaker,New Hampshire,2025,canon,2,37.0
+claude-sonnet-5-5,parent_caretaker,New Jersey,2025,canon,2,133.0
+claude-sonnet-5-5,parent_caretaker,New Mexico,2025,canon,2,138.0
+claude-sonnet-5-5,parent_caretaker,New York,2025,canon,2,138.0
+claude-sonnet-5-5,parent_caretaker,North Carolina,2025,canon,2,42.0
+claude-sonnet-5-5,parent_caretaker,North Dakota,2025,canon,2,52.0
+claude-sonnet-5-5,parent_caretaker,Ohio,2025,canon,2,90.0
+claude-sonnet-5-5,parent_caretaker,Oklahoma,2025,canon,2,41.0
+claude-sonnet-5-5,parent_caretaker,Oregon,2025,canon,2,38.0
+claude-sonnet-5-5,parent_caretaker,Pennsylvania,2025,canon,2,33.0
+claude-sonnet-5-5,parent_caretaker,Rhode Island,2025,canon,2,133.0
+claude-sonnet-5-5,parent_caretaker,South Carolina,2025,canon,2,67.0
+claude-sonnet-5-5,parent_caretaker,South Dakota,2025,canon,2,52.0
+claude-sonnet-5-5,parent_caretaker,Tennessee,2025,canon,2,98.0
+claude-sonnet-5-5,parent_caretaker,Texas,2025,canon,2,16.0
+claude-sonnet-5-5,parent_caretaker,Utah,2025,canon,2,44.0
+claude-sonnet-5-5,parent_caretaker,Vermont,2025,canon,2,138.0
+claude-sonnet-5-5,parent_caretaker,Virginia,2025,canon,2,38.0
+claude-sonnet-5-5,parent_caretaker,Washington,2025,canon,2,38.0
+claude-sonnet-5-5,parent_caretaker,West Virginia,2025,canon,2,32.0
+claude-sonnet-5-5,parent_caretaker,Wisconsin,2025,canon,2,100.0
+claude-sonnet-5-5,parent_caretaker,Wyoming,2025,canon,2,50.0
+gpt-5.6-sol,pregnancy,Alabama,2025,canon,1,146.0
+gpt-5.6-sol,pregnancy,Alaska,2025,canon,1,230.0
+gpt-5.6-sol,pregnancy,Arizona,2025,canon,1,161.0
+gpt-5.6-sol,pregnancy,Arkansas,2025,canon,1,214.0
+gpt-5.6-sol,pregnancy,California,2025,canon,1,322.0
+gpt-5.6-sol,pregnancy,Colorado,2025,canon,1,265.0
+gpt-5.6-sol,pregnancy,Connecticut,2025,canon,1,263.0
+gpt-5.6-sol,pregnancy,Delaware,2025,canon,1,217.0
+gpt-5.6-sol,pregnancy,District of Columbia,2025,canon,1,324.0
+gpt-5.6-sol,pregnancy,Florida,2025,canon,1,201.0
+gpt-5.6-sol,pregnancy,Georgia,2025,canon,1,225.0
+gpt-5.6-sol,pregnancy,Hawaii,2025,canon,1,313.0
+gpt-5.6-sol,pregnancy,Idaho,2025,canon,1,143.0
+gpt-5.6-sol,pregnancy,Illinois,2025,canon,1,218.0
+gpt-5.6-sol,pregnancy,Indiana,2025,canon,1,218.0
+gpt-5.6-sol,pregnancy,Iowa,2025,canon,1,380.0
+gpt-5.6-sol,pregnancy,Kansas,2025,canon,1,260.0
+gpt-5.6-sol,pregnancy,Kentucky,2025,canon,1,218.0
+gpt-5.6-sol,pregnancy,Louisiana,2025,canon,1,259.0
+gpt-5.6-sol,pregnancy,Maine,2025,canon,1,219.0
+gpt-5.6-sol,pregnancy,Maryland,2025,canon,1,269.0
+gpt-5.6-sol,pregnancy,Massachusetts,2025,canon,1,305.0
+gpt-5.6-sol,pregnancy,Michigan,2025,canon,1,200.0
+gpt-5.6-sol,pregnancy,Minnesota,2025,canon,1,283.0
+gpt-5.6-sol,pregnancy,Mississippi,2025,canon,1,199.0
+gpt-5.6-sol,pregnancy,Missouri,2025,canon,1,201.0
+gpt-5.6-sol,pregnancy,Montana,2025,canon,1,162.0
+gpt-5.6-sol,pregnancy,Nebraska,2025,canon,1,199.0
+gpt-5.6-sol,pregnancy,Nevada,2025,canon,1,205.0
+gpt-5.6-sol,pregnancy,New Hampshire,2025,canon,1,201.0
+gpt-5.6-sol,pregnancy,New Jersey,2025,canon,1,205.0
+gpt-5.6-sol,pregnancy,New Mexico,2025,canon,1,305.0
+gpt-5.6-sol,pregnancy,New York,2025,canon,1,228.0
+gpt-5.6-sol,pregnancy,North Carolina,2025,canon,1,201.0
+gpt-5.6-sol,pregnancy,North Dakota,2025,canon,1,205.0
+gpt-5.6-sol,pregnancy,Ohio,2025,canon,1,211.0
+gpt-5.6-sol,pregnancy,Oklahoma,2025,canon,1,210.0
+gpt-5.6-sol,pregnancy,Oregon,2025,canon,1,190.0
+gpt-5.6-sol,pregnancy,Pennsylvania,2025,canon,1,225.0
+gpt-5.6-sol,pregnancy,Rhode Island,2025,canon,1,258.0
+gpt-5.6-sol,pregnancy,South Carolina,2025,canon,1,199.0
+gpt-5.6-sol,pregnancy,South Dakota,2025,canon,1,213.0
+gpt-5.6-sol,pregnancy,Tennessee,2025,canon,1,255.0
+gpt-5.6-sol,pregnancy,Texas,2025,canon,1,207.0
+gpt-5.6-sol,pregnancy,Utah,2025,canon,1,205.0
+gpt-5.6-sol,pregnancy,Vermont,2025,canon,1,218.0
+gpt-5.6-sol,pregnancy,Virginia,2025,canon,1,205.0
+gpt-5.6-sol,pregnancy,Washington,2025,canon,1,215.0
+gpt-5.6-sol,pregnancy,West Virginia,2025,canon,1,305.0
+gpt-5.6-sol,pregnancy,Wisconsin,2025,canon,1,306.0
+gpt-5.6-sol,pregnancy,Wyoming,2025,canon,1,159.0
+gpt-5.6-sol,infant,Alabama,2025,canon,1,317.0
+gpt-5.6-sol,infant,Alaska,2025,canon,1,208.0
+gpt-5.6-sol,infant,Arizona,2025,canon,1,230.0
+gpt-5.6-sol,infant,Arkansas,2025,canon,1,214.0
+gpt-5.6-sol,infant,California,2025,canon,1,266.0
+gpt-5.6-sol,infant,Colorado,2025,canon,1,265.0
+gpt-5.6-sol,infant,Connecticut,2025,canon,1,206.0
+gpt-5.6-sol,infant,Delaware,2025,canon,1,217.0
+gpt-5.6-sol,infant,District of Columbia,2025,canon,1,324.0
+gpt-5.6-sol,infant,Florida,2025,canon,1,215.0
+gpt-5.6-sol,infant,Georgia,2025,canon,1,225.0
+gpt-5.6-sol,infant,Hawaii,2025,canon,1,313.0
+gpt-5.6-sol,infant,Idaho,2025,canon,1,190.0
+gpt-5.6-sol,infant,Illinois,2025,canon,1,318.0
+gpt-5.6-sol,infant,Indiana,2025,canon,1,260.0
+gpt-5.6-sol,infant,Iowa,2025,canon,1,380.0
+gpt-5.6-sol,infant,Kansas,2025,canon,1,255.0
+gpt-5.6-sol,infant,Kentucky,2025,canon,1,218.0
+gpt-5.6-sol,infant,Louisiana,2025,canon,1,217.0
+gpt-5.6-sol,infant,Maine,2025,canon,1,305.0
+gpt-5.6-sol,infant,Maryland,2025,canon,1,322.0
+gpt-5.6-sol,infant,Massachusetts,2025,canon,1,305.0
+gpt-5.6-sol,infant,Michigan,2025,canon,1,217.0
+gpt-5.6-sol,infant,Minnesota,2025,canon,1,288.0
+gpt-5.6-sol,infant,Mississippi,2025,canon,1,199.0
+gpt-5.6-sol,infant,Missouri,2025,canon,1,305.0
+gpt-5.6-sol,infant,Montana,2025,canon,1,266.0
+gpt-5.6-sol,infant,Nebraska,2025,canon,1,218.0
+gpt-5.6-sol,infant,Nevada,2025,canon,1,205.0
+gpt-5.6-sol,infant,New Hampshire,2025,canon,1,323.0
+gpt-5.6-sol,infant,New Jersey,2025,canon,1,360.0
+gpt-5.6-sol,infant,New Mexico,2025,canon,1,405.0
+gpt-5.6-sol,infant,New York,2025,canon,1,405.0
+gpt-5.6-sol,infant,North Carolina,2025,canon,1,216.0
+gpt-5.6-sol,infant,North Dakota,2025,canon,1,205.0
+gpt-5.6-sol,infant,Ohio,2025,canon,1,211.0
+gpt-5.6-sol,infant,Oklahoma,2025,canon,1,210.0
+gpt-5.6-sol,infant,Oregon,2025,canon,1,305.0
+gpt-5.6-sol,infant,Pennsylvania,2025,canon,1,319.0
+gpt-5.6-sol,infant,Rhode Island,2025,canon,1,266.0
+gpt-5.6-sol,infant,South Carolina,2025,canon,1,213.0
+gpt-5.6-sol,infant,South Dakota,2025,canon,1,213.0
+gpt-5.6-sol,infant,Tennessee,2025,canon,1,200.0
+gpt-5.6-sol,infant,Texas,2025,canon,1,203.0
+gpt-5.6-sol,infant,Utah,2025,canon,1,205.0
+gpt-5.6-sol,infant,Vermont,2025,canon,1,317.0
+gpt-5.6-sol,infant,Virginia,2025,canon,1,205.0
+gpt-5.6-sol,infant,Washington,2025,canon,1,322.0
+gpt-5.6-sol,infant,West Virginia,2025,canon,1,305.0
+gpt-5.6-sol,infant,Wisconsin,2025,canon,1,306.0
+gpt-5.6-sol,infant,Wyoming,2025,canon,1,159.0
+gpt-5.6-sol,parent_caretaker,Alabama,2025,canon,1,13.0
+gpt-5.6-sol,parent_caretaker,Alaska,2025,canon,1,138.0
+gpt-5.6-sol,parent_caretaker,Arizona,2025,canon,1,106.0
+gpt-5.6-sol,parent_caretaker,Arkansas,2025,canon,1,14.0
+gpt-5.6-sol,parent_caretaker,California,2025,canon,1,109.0
+gpt-5.6-sol,parent_caretaker,Colorado,2025,canon,1,68.0
+gpt-5.6-sol,parent_caretaker,Connecticut,2025,canon,1,155.0
+gpt-5.6-sol,parent_caretaker,Delaware,2025,canon,1,87.0
+gpt-5.6-sol,parent_caretaker,District of Columbia,2025,canon,1,216.0
+gpt-5.6-sol,parent_caretaker,Florida,2025,canon,1,26.0
+gpt-5.6-sol,parent_caretaker,Georgia,2025,canon,1,35.0
+gpt-5.6-sol,parent_caretaker,Hawaii,2025,canon,1,100.0
+gpt-5.6-sol,parent_caretaker,Idaho,2025,canon,1,26.0
+gpt-5.6-sol,parent_caretaker,Illinois,2025,canon,1,138.0
+gpt-5.6-sol,parent_caretaker,Indiana,2025,canon,1,19.0
+gpt-5.6-sol,parent_caretaker,Iowa,2025,canon,1,82.0
+gpt-5.6-sol,parent_caretaker,Kansas,2025,canon,1,33.0
+gpt-5.6-sol,parent_caretaker,Kentucky,2025,canon,1,24.0
+gpt-5.6-sol,parent_caretaker,Louisiana,2025,canon,1,24.0
+gpt-5.6-sol,parent_caretaker,Maine,2025,canon,1,100.0
+gpt-5.6-sol,parent_caretaker,Maryland,2025,canon,1,123.0
+gpt-5.6-sol,parent_caretaker,Massachusetts,2025,canon,1,133.0
+gpt-5.6-sol,parent_caretaker,Michigan,2025,canon,1,54.0
+gpt-5.6-sol,parent_caretaker,Minnesota,2025,canon,1,95.0
+gpt-5.6-sol,parent_caretaker,Mississippi,2025,canon,1,22.0
+gpt-5.6-sol,parent_caretaker,Missouri,2025,canon,1,18.0
+gpt-5.6-sol,parent_caretaker,Montana,2025,canon,1,50.0
+gpt-5.6-sol,parent_caretaker,Nebraska,2025,canon,1,58.0
+gpt-5.6-sol,parent_caretaker,Nevada,2025,canon,1,84.0
+gpt-5.6-sol,parent_caretaker,New Hampshire,2025,canon,1,38.0
+gpt-5.6-sol,parent_caretaker,New Jersey,2025,canon,1,133.0
+gpt-5.6-sol,parent_caretaker,New Mexico,2025,canon,1,85.0
+gpt-5.6-sol,parent_caretaker,New York,2025,canon,1,138.0
+gpt-5.6-sol,parent_caretaker,North Carolina,2025,canon,1,37.0
+gpt-5.6-sol,parent_caretaker,North Dakota,2025,canon,1,54.0
+gpt-5.6-sol,parent_caretaker,Ohio,2025,canon,1,90.0
+gpt-5.6-sol,parent_caretaker,Oklahoma,2025,canon,1,41.0
+gpt-5.6-sol,parent_caretaker,Oregon,2025,canon,1,133.0
+gpt-5.6-sol,parent_caretaker,Pennsylvania,2025,canon,1,33.0
+gpt-5.6-sol,parent_caretaker,Rhode Island,2025,canon,1,133.0
+gpt-5.6-sol,parent_caretaker,South Carolina,2025,canon,1,62.0
+gpt-5.6-sol,parent_caretaker,South Dakota,2025,canon,1,46.0
+gpt-5.6-sol,parent_caretaker,Tennessee,2025,canon,1,89.0
+gpt-5.6-sol,parent_caretaker,Texas,2025,canon,1,12.0
+gpt-5.6-sol,parent_caretaker,Utah,2025,canon,1,55.0
+gpt-5.6-sol,parent_caretaker,Vermont,2025,canon,1,138.0
+gpt-5.6-sol,parent_caretaker,Virginia,2025,canon,1,90.0
+gpt-5.6-sol,parent_caretaker,Washington,2025,canon,1,90.0
+gpt-5.6-sol,parent_caretaker,West Virginia,2025,canon,1,35.0
+gpt-5.6-sol,parent_caretaker,Wisconsin,2025,canon,1,100.0
+gpt-5.6-sol,parent_caretaker,Wyoming,2025,canon,1,54.0
+gpt-5.6-sol,pregnancy,Alabama,2025,canon,2,146.0
+gpt-5.6-sol,pregnancy,Alaska,2025,canon,2,230.0
+gpt-5.6-sol,pregnancy,Arizona,2025,canon,2,161.0
+gpt-5.6-sol,pregnancy,Arkansas,2025,canon,2,214.0
+gpt-5.6-sol,pregnancy,California,2025,canon,2,322.0
+gpt-5.6-sol,pregnancy,Colorado,2025,canon,2,265.0
+gpt-5.6-sol,pregnancy,Connecticut,2025,canon,2,263.0
+gpt-5.6-sol,pregnancy,Delaware,2025,canon,2,217.0
+gpt-5.6-sol,pregnancy,District of Columbia,2025,canon,2,324.0
+gpt-5.6-sol,pregnancy,Florida,2025,canon,2,201.0
+gpt-5.6-sol,pregnancy,Georgia,2025,canon,2,225.0
+gpt-5.6-sol,pregnancy,Hawaii,2025,canon,2,313.0
+gpt-5.6-sol,pregnancy,Idaho,2025,canon,2,143.0
+gpt-5.6-sol,pregnancy,Illinois,2025,canon,2,218.0
+gpt-5.6-sol,pregnancy,Indiana,2025,canon,2,218.0
+gpt-5.6-sol,pregnancy,Iowa,2025,canon,2,380.0
+gpt-5.6-sol,pregnancy,Kansas,2025,canon,2,255.0
+gpt-5.6-sol,pregnancy,Kentucky,2025,canon,2,218.0
+gpt-5.6-sol,pregnancy,Louisiana,2025,canon,2,259.0
+gpt-5.6-sol,pregnancy,Maine,2025,canon,2,219.0
+gpt-5.6-sol,pregnancy,Maryland,2025,canon,2,269.0
+gpt-5.6-sol,pregnancy,Massachusetts,2025,canon,2,305.0
+gpt-5.6-sol,pregnancy,Michigan,2025,canon,2,200.0
+gpt-5.6-sol,pregnancy,Minnesota,2025,canon,2,283.0
+gpt-5.6-sol,pregnancy,Mississippi,2025,canon,2,199.0
+gpt-5.6-sol,pregnancy,Missouri,2025,canon,2,305.0
+gpt-5.6-sol,pregnancy,Montana,2025,canon,2,162.0
+gpt-5.6-sol,pregnancy,Nebraska,2025,canon,2,199.0
+gpt-5.6-sol,pregnancy,Nevada,2025,canon,2,205.0
+gpt-5.6-sol,pregnancy,New Hampshire,2025,canon,2,201.0
+gpt-5.6-sol,pregnancy,New Jersey,2025,canon,2,205.0
+gpt-5.6-sol,pregnancy,New Mexico,2025,canon,2,305.0
+gpt-5.6-sol,pregnancy,New York,2025,canon,2,228.0
+gpt-5.6-sol,pregnancy,North Carolina,2025,canon,2,201.0
+gpt-5.6-sol,pregnancy,North Dakota,2025,canon,2,205.0
+gpt-5.6-sol,pregnancy,Ohio,2025,canon,2,211.0
+gpt-5.6-sol,pregnancy,Oklahoma,2025,canon,2,210.0
+gpt-5.6-sol,pregnancy,Oregon,2025,canon,2,190.0
+gpt-5.6-sol,pregnancy,Pennsylvania,2025,canon,2,225.0
+gpt-5.6-sol,pregnancy,Rhode Island,2025,canon,2,258.0
+gpt-5.6-sol,pregnancy,South Carolina,2025,canon,2,199.0
+gpt-5.6-sol,pregnancy,South Dakota,2025,canon,2,213.0
+gpt-5.6-sol,pregnancy,Tennessee,2025,canon,2,255.0
+gpt-5.6-sol,pregnancy,Texas,2025,canon,2,207.0
+gpt-5.6-sol,pregnancy,Utah,2025,canon,2,205.0
+gpt-5.6-sol,pregnancy,Vermont,2025,canon,2,218.0
+gpt-5.6-sol,pregnancy,Virginia,2025,canon,2,213.0
+gpt-5.6-sol,pregnancy,Washington,2025,canon,2,215.0
+gpt-5.6-sol,pregnancy,West Virginia,2025,canon,2,305.0
+gpt-5.6-sol,pregnancy,Wisconsin,2025,canon,2,306.0
+gpt-5.6-sol,pregnancy,Wyoming,2025,canon,2,159.0
+gpt-5.6-sol,infant,Alabama,2025,canon,2,317.0
+gpt-5.6-sol,infant,Alaska,2025,canon,2,208.0
+gpt-5.6-sol,infant,Arizona,2025,canon,2,230.0
+gpt-5.6-sol,infant,Arkansas,2025,canon,2,214.0
+gpt-5.6-sol,infant,California,2025,canon,2,266.0
+gpt-5.6-sol,infant,Colorado,2025,canon,2,265.0
+gpt-5.6-sol,infant,Connecticut,2025,canon,2,206.0
+gpt-5.6-sol,infant,Delaware,2025,canon,2,217.0
+gpt-5.6-sol,infant,District of Columbia,2025,canon,2,324.0
+gpt-5.6-sol,infant,Florida,2025,canon,2,215.0
+gpt-5.6-sol,infant,Georgia,2025,canon,2,225.0
+gpt-5.6-sol,infant,Hawaii,2025,canon,2,313.0
+gpt-5.6-sol,infant,Idaho,2025,canon,2,190.0
+gpt-5.6-sol,infant,Illinois,2025,canon,2,318.0
+gpt-5.6-sol,infant,Indiana,2025,canon,2,260.0
+gpt-5.6-sol,infant,Iowa,2025,canon,2,380.0
+gpt-5.6-sol,infant,Kansas,2025,canon,2,255.0
+gpt-5.6-sol,infant,Kentucky,2025,canon,2,218.0
+gpt-5.6-sol,infant,Louisiana,2025,canon,2,217.0
+gpt-5.6-sol,infant,Maine,2025,canon,2,305.0
+gpt-5.6-sol,infant,Maryland,2025,canon,2,322.0
+gpt-5.6-sol,infant,Massachusetts,2025,canon,2,305.0
+gpt-5.6-sol,infant,Michigan,2025,canon,2,217.0
+gpt-5.6-sol,infant,Minnesota,2025,canon,2,288.0
+gpt-5.6-sol,infant,Mississippi,2025,canon,2,199.0
+gpt-5.6-sol,infant,Missouri,2025,canon,2,201.0
+gpt-5.6-sol,infant,Montana,2025,canon,2,266.0
+gpt-5.6-sol,infant,Nebraska,2025,canon,2,218.0
+gpt-5.6-sol,infant,Nevada,2025,canon,2,210.0
+gpt-5.6-sol,infant,New Hampshire,2025,canon,2,323.0
+gpt-5.6-sol,infant,New Jersey,2025,canon,2,360.0
+gpt-5.6-sol,infant,New Mexico,2025,canon,2,405.0
+gpt-5.6-sol,infant,New York,2025,canon,2,405.0
+gpt-5.6-sol,infant,North Carolina,2025,canon,2,216.0
+gpt-5.6-sol,infant,North Dakota,2025,canon,2,205.0
+gpt-5.6-sol,infant,Ohio,2025,canon,2,211.0
+gpt-5.6-sol,infant,Oklahoma,2025,canon,2,210.0
+gpt-5.6-sol,infant,Oregon,2025,canon,2,310.0
+gpt-5.6-sol,infant,Pennsylvania,2025,canon,2,319.0
+gpt-5.6-sol,infant,Rhode Island,2025,canon,2,266.0
+gpt-5.6-sol,infant,South Carolina,2025,canon,2,213.0
+gpt-5.6-sol,infant,South Dakota,2025,canon,2,213.0
+gpt-5.6-sol,infant,Tennessee,2025,canon,2,260.0
+gpt-5.6-sol,infant,Texas,2025,canon,2,203.0
+gpt-5.6-sol,infant,Utah,2025,canon,2,205.0
+gpt-5.6-sol,infant,Vermont,2025,canon,2,317.0
+gpt-5.6-sol,infant,Virginia,2025,canon,2,205.0
+gpt-5.6-sol,infant,Washington,2025,canon,2,322.0
+gpt-5.6-sol,infant,West Virginia,2025,canon,2,305.0
+gpt-5.6-sol,infant,Wisconsin,2025,canon,2,306.0
+gpt-5.6-sol,infant,Wyoming,2025,canon,2,159.0
+gpt-5.6-sol,parent_caretaker,Alabama,2025,canon,2,13.0
+gpt-5.6-sol,parent_caretaker,Alaska,2025,canon,2,138.0
+gpt-5.6-sol,parent_caretaker,Arizona,2025,canon,2,106.0
+gpt-5.6-sol,parent_caretaker,Arkansas,2025,canon,2,14.0
+gpt-5.6-sol,parent_caretaker,California,2025,canon,2,109.0
+gpt-5.6-sol,parent_caretaker,Colorado,2025,canon,2,68.0
+gpt-5.6-sol,parent_caretaker,Connecticut,2025,canon,2,138.0
+gpt-5.6-sol,parent_caretaker,Delaware,2025,canon,2,87.0
+gpt-5.6-sol,parent_caretaker,District of Columbia,2025,canon,2,216.0
+gpt-5.6-sol,parent_caretaker,Florida,2025,canon,2,26.0
+gpt-5.6-sol,parent_caretaker,Georgia,2025,canon,2,35.0
+gpt-5.6-sol,parent_caretaker,Hawaii,2025,canon,2,100.0
+gpt-5.6-sol,parent_caretaker,Idaho,2025,canon,2,24.0
+gpt-5.6-sol,parent_caretaker,Illinois,2025,canon,2,138.0
+gpt-5.6-sol,parent_caretaker,Indiana,2025,canon,2,19.0
+gpt-5.6-sol,parent_caretaker,Iowa,2025,canon,2,82.0
+gpt-5.6-sol,parent_caretaker,Kansas,2025,canon,2,33.0
+gpt-5.6-sol,parent_caretaker,Kentucky,2025,canon,2,24.0
+gpt-5.6-sol,parent_caretaker,Louisiana,2025,canon,2,24.0
+gpt-5.6-sol,parent_caretaker,Maine,2025,canon,2,100.0
+gpt-5.6-sol,parent_caretaker,Maryland,2025,canon,2,116.0
+gpt-5.6-sol,parent_caretaker,Massachusetts,2025,canon,2,133.0
+gpt-5.6-sol,parent_caretaker,Michigan,2025,canon,2,54.0
+gpt-5.6-sol,parent_caretaker,Minnesota,2025,canon,2,133.0
+gpt-5.6-sol,parent_caretaker,Mississippi,2025,canon,2,22.0
+gpt-5.6-sol,parent_caretaker,Missouri,2025,canon,2,18.0
+gpt-5.6-sol,parent_caretaker,Montana,2025,canon,2,50.0
+gpt-5.6-sol,parent_caretaker,Nebraska,2025,canon,2,58.0
+gpt-5.6-sol,parent_caretaker,Nevada,2025,canon,2,84.0
+gpt-5.6-sol,parent_caretaker,New Hampshire,2025,canon,2,38.0
+gpt-5.6-sol,parent_caretaker,New Jersey,2025,canon,2,133.0
+gpt-5.6-sol,parent_caretaker,New Mexico,2025,canon,2,85.0
+gpt-5.6-sol,parent_caretaker,New York,2025,canon,2,138.0
+gpt-5.6-sol,parent_caretaker,North Carolina,2025,canon,2,37.0
+gpt-5.6-sol,parent_caretaker,North Dakota,2025,canon,2,54.0
+gpt-5.6-sol,parent_caretaker,Ohio,2025,canon,2,90.0
+gpt-5.6-sol,parent_caretaker,Oklahoma,2025,canon,2,41.0
+gpt-5.6-sol,parent_caretaker,Oregon,2025,canon,2,133.0
+gpt-5.6-sol,parent_caretaker,Pennsylvania,2025,canon,2,33.0
+gpt-5.6-sol,parent_caretaker,Rhode Island,2025,canon,2,133.0
+gpt-5.6-sol,parent_caretaker,South Carolina,2025,canon,2,62.0
+gpt-5.6-sol,parent_caretaker,South Dakota,2025,canon,2,46.0
+gpt-5.6-sol,parent_caretaker,Tennessee,2025,canon,2,89.0
+gpt-5.6-sol,parent_caretaker,Texas,2025,canon,2,12.0
+gpt-5.6-sol,parent_caretaker,Utah,2025,canon,2,55.0
+gpt-5.6-sol,parent_caretaker,Vermont,2025,canon,2,138.0
+gpt-5.6-sol,parent_caretaker,Virginia,2025,canon,2,90.0
+gpt-5.6-sol,parent_caretaker,Washington,2025,canon,2,90.0
+gpt-5.6-sol,parent_caretaker,West Virginia,2025,canon,2,35.0
+gpt-5.6-sol,parent_caretaker,Wisconsin,2025,canon,2,100.0
+gpt-5.6-sol,parent_caretaker,Wyoming,2025,canon,2,54.0

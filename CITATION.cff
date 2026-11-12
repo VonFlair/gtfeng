@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use GT-FENG, please cite the paper below."
+title: "GT-FENG: General Theory of Factual Evaluation and Normative Grounding"
+authors:
+  - family-names: Feng
+    given-names: Jiayu
+version: 0.1.0
+license: Apache-2.0
+preferred-citation:
+  type: article
+  title: "GT-FENG: General Theory of Factual Evaluation and Normative Grounding"
+  authors:
+    - family-names: Feng
+      given-names: Jiayu
+  year: 2026
+  # arXiv identifier to be added after announcement
