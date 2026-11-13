@@ -5,6 +5,7 @@
     import gtfeng
     result = gtfeng.evaluate(answers, references, groups=["model"])
     result.report(families={"cross_jurisdiction": ["J", "JD"]})
+    result.feng_value(["J", "JD"])   # Rule 7 and the FENG value
     print(gtfeng.cite())   # BibTeX for the GT-FENG paper
 
 Modules, in the order of the paper:
@@ -12,8 +13,10 @@ Modules, in the order of the paper:
     references  the reference set R of documented rules
     rules       Rules 1-6, one function each
     core        evaluate(): runs the rules on every stable item
+    baseline    Rule 7 (local perturbation baseline) and the FENG value
     report      the standard report and citation helpers
 """
+from .baseline import DEFAULT_INCREMENTS
 from .core import DEFAULT_COORDINATES, Result, evaluate
 from .report import VERSION, cite
 from .rules import AMBIGUOUS, CORRECT, UNMATCHED
@@ -21,4 +24,4 @@ from .values import normalize
 
 __version__ = VERSION
 __all__ = ["evaluate", "cite", "Result", "normalize", "DEFAULT_COORDINATES", "CORRECT", "UNMATCHED", "AMBIGUOUS",
-           "__version__"]
+           "DEFAULT_INCREMENTS", "__version__"]

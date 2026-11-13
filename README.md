@@ -51,11 +51,32 @@ Coordinates are configurable (`coordinates=[...]`); each must have a distinct in
 | Rule 4, shift | `shifts`, e.g. `J`, `T`, `JD`, `JT` |
 | Rule 5, label and ambiguity | single shift, or `ambiguous {...}` (shift ambiguity); `n_sources` counts distinct sources, so source ambiguity is `n_sources >= 2` (documented rules that differ only in time are one source) |
 | Rule 6, reference levels | `level` column (level k means R_k); extension `level_by_shift`, e.g. `{"T": 2}` holds matches with shift T back until level 2 |
+| Rule 7, local perturbation baseline | `result.feng_value(family)`: O, N, E, the FENG value, and p |
 | Standard report | `result.report(families=...)`: correct, U, single-shift labels, shift-ambiguous, source-ambiguous, mean sources per matched item, and O for each family |
 
 Extension `scope={"ref_column": "answer_coordinate"}` restricts a documented rule to items whose coordinate equals the rule's value in that column.
 
-Version 0.1 implements Rules 1–6 and the standard report. Rule 7 (the local perturbation baseline) will follow in a later version.
+## Rule 7 and the FENG value
+
+For a family of shifts F, `result.feng_value(F)` compares how often wrong answers are grounded in F with how often nearby values are:
+
+```python
+result.feng_value(["J", "JD"])     # one row per group and reference level
+#  W  O      N     E  feng_value       p
+```
+
+| Column | Meaning |
+|---|---|
+| `W` | wrong items |
+| `O` | wrong items grounded in F (they have matches, and every shift in M belongs to F) |
+| `N` | local perturbation baseline: each wrong answer A is replaced by A + i for every increment i (default ±1 to ±4; increments that reach the correct value are dropped), and N sums each item's share of nearby values grounded in F |
+| `E` | O − N |
+| `feng_value` | (O − N) / (W − N) |
+| `p` | share of random perturbations (one increment per item) whose grounded count reaches O |
+
+The FENG value is 0 when wrong answers are grounded in F as often as nearby values, 1 when every wrong answer is grounded in F, and negative when nearby values are grounded more often. It has the chance-corrected form of Cohen's kappa; the match event and the local baseline come from GT-FENG. Rule 7 needs numeric answers, and the increments must leave out any known definition shift (the Medicaid example leaves out 5).
+
+Report the FENG value next to accuracy: it describes the structure of wrong answers and does not rank models.
 
 ## Example: Medicaid income limits
 
@@ -66,7 +87,7 @@ cd examples/medicaid
 python run_example.py
 ```
 
-The test suite checks that the output equals the paper's Table 3.
+The test suite checks that the output equals the paper's Table 3 and that Rule 7 reproduces the local perturbation baseline of the Medicaid instance.
 
 ## Citation
 

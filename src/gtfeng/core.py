@@ -7,6 +7,7 @@ The steps follow the paper:
     2. Rule 1: is the answer correct? A correct answer is labeled "correct" at every level;
     3. for a wrong answer, Rules 2 and 4: find the documented rules that set the same value, and their shifts;
     4. for a wrong answer, Rules 3, 5 and 6: label it at each reference level.
+Rule 7 and the FENG value run on the result: Result.feng_value (see baseline.py).
 
 Glossary
     item     one group (e.g. one model) x one asked index; a dict of group and coordinate values
@@ -21,6 +22,7 @@ from typing import Callable, Iterable, Mapping, Sequence
 
 import pandas as pd
 
+from .baseline import DEFAULT_INCREMENTS, feng_values
 from .references import ReferenceSet
 from .report import standard_report, to_markdown
 from .rules import CORRECT, coordinate_initials, count_sources, find_matches, is_correct, label
@@ -40,6 +42,7 @@ class Result:
     items: pd.DataFrame
     unstable: pd.DataFrame
     groups: tuple = field(default_factory=tuple)
+    _context: dict | None = field(default=None, repr=False)
 
     def report(self, families: Mapping[str, Iterable[str]] | None = None) -> pd.DataFrame:
         """The standard report; `families` maps a name to a set of shifts, e.g. {"cross": ["J", "JD"]}."""
@@ -48,6 +51,15 @@ class Result:
     def report_markdown(self, families: Mapping[str, Iterable[str]] | None = None) -> str:
         """The standard report as a signed Markdown table."""
         return to_markdown(self.report(families))
+
+    def feng_value(self, family: Iterable[str], *, increments: Sequence[float] = DEFAULT_INCREMENTS,
+                   permutations: int = 10000, seed: int = 0) -> pd.DataFrame:
+        """Rule 7 and the FENG value for a family, e.g. ["J", "JD"]; one row per group and level.
+
+        Columns: W (wrong items), O (grounded in the family), N (local perturbation baseline), E = O - N,
+        feng_value = (O - N) / (W - N), and p. Numeric answers only; see gtfeng.baseline.
+        """
+        return feng_values(self, family, increments=increments, permutations=permutations, seed=seed)
 
 
 def evaluate(answers: pd.DataFrame, references: pd.DataFrame, *,
@@ -119,7 +131,9 @@ def evaluate(answers: pd.DataFrame, references: pd.DataFrame, *,
                          "n_shifts": len(shifts),
                          "n_sources": count_sources(in_level),
                          "matches": tuple(m.rule.index for m in in_level)})
-    return Result(items=pd.DataFrame(rows), unstable=pd.DataFrame(unstable), groups=groups)
+    context = {"references": reference_set, "coordinates": coordinates, "initials": initials,
+               "level_by_shift": level_by_shift, "compare": compare}
+    return Result(items=pd.DataFrame(rows), unstable=pd.DataFrame(unstable), groups=groups, _context=context)
 
 
 def _check_columns(table: pd.DataFrame, required: Sequence[str], name: str) -> None:

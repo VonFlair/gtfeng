@@ -24,3 +24,5 @@ report = result.report(families={"cross_jurisdiction": ["J", "JD"]})
 pd.set_option("display.width", 200)
 print(report[["model", "level", "wrong", "U", "shift_ambiguous", "source_ambiguous", "mean_sources",
               "O_cross_jurisdiction"]].to_string(index=False))
+print()
+print(result.feng_value(["J", "JD"]).to_string(index=False))

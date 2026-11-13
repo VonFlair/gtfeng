@@ -28,6 +28,21 @@ class TestMedicaid(unittest.TestCase):
             r = rep.loc[k]
             self.assertEqual((r.U, r.shift_ambiguous, r.source_ambiguous, r.O_cross), (u, sa, so, o), k)
 
+    def test_rule7_feng_value(self):
+        """Rule 7 with increments +-1..+-4 reproduces the local perturbation baseline of the Medicaid instance."""
+        res = gtfeng.evaluate(
+            pd.read_csv(EX / "answers.csv"), pd.read_csv(EX / "references.csv"), groups=["model"],
+            level_by_shift={"D": 2, "T": 2, "TD": 2, "JT": math.inf, "JTD": math.inf},
+            scope={"asked_quantity": "quantity", "asked_jurisdiction": "jurisdiction"})
+        fv = res.feng_value(["J", "JD"], permutations=1000).set_index(["model", "level"])
+        expected = {  # (model, level): (W, O, N, FENG value)
+            ("claude-sonnet-5-5", 1): (62, 37, 27.21, 0.281), ("claude-sonnet-5-5", 4): (62, 8, 19.46, -0.270),
+            ("gpt-5.6-sol", 1): (68, 47, 26.41, 0.495), ("gpt-5.6-sol", 4): (68, 15, 19.79, -0.099),
+        }
+        for k, (w, o, n, f) in expected.items():
+            r = fv.loc[k]
+            self.assertEqual((r.W, r.O, r.N, r.feng_value), (w, o, n, f), k)
+
 
 if __name__ == "__main__":
     unittest.main()

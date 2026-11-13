@@ -104,5 +104,36 @@ class TestRules(unittest.TestCase):
             gtfeng.evaluate(pd.DataFrame(), refs(), coordinates=["time", "territory"])
 
 
+class TestFengValue(unittest.TestCase):
+    def setUp(self):
+        self.refs = pd.DataFrame(
+            [("limit", "A", 2025, "x", 50), ("limit", "B", 2025, "x", 40)],
+            columns=["quantity", "jurisdiction", "time", "definition", "value"])
+
+    def ask(self, answer):
+        return pd.DataFrame([{"quantity": "limit", "jurisdiction": "A", "time": 2025, "definition": "x",
+                              "answer": answer}])
+
+    def test_grounded_answer_beyond_baseline(self):
+        # 40 matches B's rule; the nearby values 39 and 41 match nothing, so N = 0 and the FENG value is 1.
+        fv = gtfeng.evaluate(self.ask(40), self.refs).feng_value(["J"], increments=[-1, 1], permutations=100)
+        row = fv.iloc[0]
+        self.assertEqual((row.W, row.O, row.N, row.feng_value, row.p), (1, 1, 0.0, 1.0, 0.0))
+
+    def test_increment_reaching_gold_is_dropped(self):
+        # 39 + 1 = 40 matches B; 39 + 11 = 50 is the correct value and is dropped, so N = 1 / 1 = 1.
+        fv = gtfeng.evaluate(self.ask(39), self.refs).feng_value(["J"], increments=[1, 11], permutations=100)
+        row = fv.iloc[0]
+        self.assertEqual((row.O, row.N, row.E), (0, 1.0, -1.0))
+
+    def test_numeric_answers_only(self):
+        refs = pd.DataFrame([("rule", "A", 2025, "x", "yes"), ("rule", "B", 2025, "x", "no")],
+                            columns=["quantity", "jurisdiction", "time", "definition", "value"])
+        answers = pd.DataFrame([{"quantity": "rule", "jurisdiction": "A", "time": 2025, "definition": "x",
+                                 "answer": "no"}])
+        with self.assertRaises(ValueError):
+            gtfeng.evaluate(answers, refs).feng_value(["J"])
+
+
 if __name__ == "__main__":
     unittest.main()
