@@ -1,6 +1,6 @@
-"""Reproduce the GT-FENG standard report for the Medicaid instance (paper Section 5, Table 3).
+"""Reproduce the GT-FENG standard report for the Medicaid instance (paper Section 6, Table 3).
 
-usage: python run_example.py   (run build_tables.py first)
+usage: python run_example.py   (the tables are included; build_tables.py rebuilds them)
 """
 import math
 from pathlib import Path
@@ -15,9 +15,13 @@ answers = pd.read_csv(HERE / "answers.csv")
 
 result = gtfeng.evaluate(
     answers, refs, groups=["model"],
-    # level 1 is the naive check: other states' July 2025 values. The asked state's own other values enter at
-    # level 2, and other states' earlier values are never used.
+    # When each kind of match starts to count:
+    #   J, JD      another state's 2025 limit: from level 1 (the default)
+    #   D, T, TD   the asked state's own other definition or year: from level 2
+    #   JT, JTD    another state's earlier year: never (math.inf means "at no level")
     level_by_shift={"D": 2, "T": 2, "TD": 2, "JT": math.inf, "JTD": math.inf},
+    # A documented rule is compared only with questions about the same quantity; the extra data-book numbers
+    # added at level 4 are compared only with questions about their own state.
     scope={"asked_quantity": "quantity", "asked_jurisdiction": "jurisdiction"},
 )
 report = result.report(families={"cross_jurisdiction": ["J", "JD"]})

@@ -2,6 +2,8 @@
 
 **GT-FENG (General Theory of Factual Evaluation and Normative Grounding)** evaluates language-model answers about facts whose correct value is set by a rule: an income limit, a filing deadline, a legal duty. The same answer can be right under one jurisdiction, date, or definition and wrong under another. `gtfeng` scores each answer against the rule that applies and lists every documented rule that matches a wrong answer.
 
+Use it when you evaluate model answers about numbers, dates, or yes/no facts set by law or policy, and you want to know whether a wrong answer is the correct value for another state, another year, or another definition.
+
 ## Install
 
 ```bash
@@ -32,6 +34,19 @@ result.report(families={"cross_jurisdiction": ["J", "JD"]})
 
 The answer 40 is wrong for A in 2025. It matches B's current rule (shift **J**, another jurisdiction) and A's 2018 rule (shift **T**, another time), so GT-FENG labels it ambiguous and reports both sources.
 
+## Key terms
+
+| Term | Meaning | Example (quick start) |
+|---|---|---|
+| match | a documented rule, other than the one asked about, that gives the same value as a wrong answer | 40 matches B's 2025 rule and A's 2018 rule |
+| U | a wrong answer with no match | an answer of 45 |
+| shift | the coordinates in which a match differs from the question, written as their initials | B 2025 has shift J (another jurisdiction); A 2018 has shift T (another time) |
+| source | where a match comes from; matches that differ only in year count as one source | A's 2018 and A's 2021 rules would be one source |
+| reference level | how many documented rules a wrong answer is checked against; R1 is the smallest set, and each later level adds rules. Set with the `level` column or `level_by_shift` (default: everything at R1) | in the Medicaid example, R1 holds other states' current limits and R2 adds the asked state's earlier ones |
+| ambiguous | the matches have two or more different shifts (shift ambiguity); matches from two or more sources are source ambiguity | 40 is `ambiguous {J, T}` |
+| family | a set of shifts treated as one kind of error | {J, JD}: the value belongs to another jurisdiction |
+| grounded in a family | every match of the wrong answer has a shift in the family | 40 is not grounded in {J, JD}, because its match A 2018 has shift T |
+
 ## Inputs
 
 | Table | Required columns | Optional columns |
@@ -42,6 +57,8 @@ The answer 40 is wrong for A in 2025. It matches B's current rule (shift **J**, 
 Coordinates are configurable (`coordinates=[...]`); each must have a distinct initial, which names its shift. Values can be numbers, Booleans, strings, or lists compared as sets.
 
 ## What it computes
+
+Rule numbers follow the GT-FENG paper (see [Citation](#citation)).
 
 | Paper | `gtfeng` |
 |---|---|
@@ -68,10 +85,10 @@ result.feng_value(["J", "JD"])     # one row per group and reference level
 | Column | Meaning |
 |---|---|
 | `W` | wrong items |
-| `O` | wrong items grounded in F (they have matches, and every shift in M belongs to F) |
+| `O` | wrong items grounded in F (they have matches, and every match has a shift in F) |
 | `N` | local perturbation baseline: each wrong answer A is replaced by A + i for every increment i (default ±1 to ±4; increments that reach the correct value are dropped), and N sums each item's share of nearby values grounded in F |
 | `E` | O − N |
-| `feng_value` | (O − N) / (W − N) |
+| `feng_value` | (O − N) / (W − N); NaN when N ≥ W |
 | `p` | share of random perturbations (one increment per item) whose grounded count reaches O |
 
 The FENG value is 0 when wrong answers are grounded in F as often as nearby values, 1 when every wrong answer is grounded in F, and negative when nearby values are grounded more often. It has the chance-corrected form of Cohen's kappa; the match event and the local baseline come from GT-FENG. Rule 7 needs numeric answers, and the increments must leave out any known definition shift (the Medicaid example leaves out 5).
@@ -80,14 +97,21 @@ Report the FENG value next to accuracy: it describes the structure of wrong answ
 
 ## Example: Medicaid income limits
 
-`examples/medicaid/` reproduces the paper's Medicaid instance (two models, 51 jurisdictions, three quantities, reference levels R1–R4):
+`examples/medicaid/` reproduces the paper's Medicaid instance (two models, 51 jurisdictions, three quantities). Its four reference levels follow the paper's Table 2:
+
+| Level | A wrong answer is also checked against |
+|---|---|
+| R1 | other states' July 2025 limits, with and without the 5-point income disregard |
+| R2 | the asked state's own limit under the other definition, three earlier editions, and the federal anchors 100, 133 and 138 (percent of the federal poverty level) |
+| R3 | every edition of the asked state's limits, 2018–2024 |
+| R4 | every other number in the asked state's rows of the MACStats data book, 2018–2025 |
 
 ```bash
 cd examples/medicaid
 python run_example.py
 ```
 
-The test suite checks that the output equals the paper's Table 3 and that Rule 7 reproduces the local perturbation baseline of the Medicaid instance.
+The input tables are included (`build_tables.py` rebuilds them from the original paper's supplementary materials), and `run_example.py` shows how to set reference levels with `level_by_shift` and limit rules with `scope`. The test suite checks that the output equals the paper's Table 3 and that Rule 7 reproduces the local perturbation baseline of the Medicaid instance.
 
 ## Citation
 

@@ -1,4 +1,4 @@
-"""Regression test: the package reproduces the paper's Medicaid standard report (Section 5, Table 3)."""
+"""Regression test: the package reproduces the paper's Medicaid standard report (Section 6, Table 3)."""
 import math
 import unittest
 from pathlib import Path
