@@ -97,7 +97,7 @@ Report the FENG value next to accuracy: it describes the structure of wrong answ
 
 ## Example: Medicaid income limits
 
-[`examples/medicaid/`](https://github.com/VonFlair/gtfeng/tree/main/examples/medicaid) (in the GitHub repository) reproduces the paper's Medicaid instance (two models, 51 jurisdictions, three quantities). Its four reference levels follow the paper's Table 2:
+[`examples/medicaid/`](https://github.com/VonFlair/gtfeng/tree/main/examples/medicaid) (in the GitHub repository) reproduces the paper's Medicaid instance (two models, 51 jurisdictions, three quantities). The data come from [*Right Number, Wrong State?*](https://arxiv.org/abs/2610.09458) (Feng, 2026); if you use them, please cite that paper as well. Its four reference levels follow the paper's Table 2:
 
 | Level | A wrong answer is also checked against |
 |---|---|

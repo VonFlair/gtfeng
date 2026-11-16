@@ -19,3 +19,13 @@ preferred-citation:
     - type: other
       value: "arXiv:2611.18279"
       description: arXiv identifier
+references:
+  - type: article
+    title: "Right Number, Wrong State? Measuring Cross-Jurisdiction Substitution in LLM Recall of State Policy"
+    authors:
+      - family-names: Feng
+        given-names: Jiayu
+    year: 2026
+    journal: "arXiv preprint arXiv:2610.09458"
+    url: "https://arxiv.org/abs/2610.09458"
+    notes: "Source of the Medicaid example data"

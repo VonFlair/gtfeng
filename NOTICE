@@ -5,3 +5,6 @@ This product includes software developed by Jiayu Feng as part of GT-FENG.
 
 If you use GT-FENG in research, please cite:
 Feng, J. (2026). GT-FENG: General Theory of Factual Evaluation and Normative Grounding in Language Models. arXiv:2611.18279. https://arxiv.org/abs/2611.18279
+
+The Medicaid example data in examples/medicaid/ come from:
+Feng, J. (2026). Right Number, Wrong State? Measuring Cross-Jurisdiction Substitution in LLM Recall of State Policy. arXiv:2610.09458. https://arxiv.org/abs/2610.09458
