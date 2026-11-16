@@ -7,8 +7,8 @@ Use it when you evaluate model answers about numbers, dates, or yes/no facts set
 ## Install
 
 ```bash
-pip install gtfeng          # after release on PyPI
-pip install .               # from this folder
+pip install gtfeng          # from PyPI
+pip install .               # from a clone of this repository
 ```
 
 Requires Python 3.9+ and pandas.
@@ -97,7 +97,7 @@ Report the FENG value next to accuracy: it describes the structure of wrong answ
 
 ## Example: Medicaid income limits
 
-`examples/medicaid/` reproduces the paper's Medicaid instance (two models, 51 jurisdictions, three quantities). Its four reference levels follow the paper's Table 2:
+[`examples/medicaid/`](https://github.com/VonFlair/gtfeng/tree/main/examples/medicaid) (in the GitHub repository) reproduces the paper's Medicaid instance (two models, 51 jurisdictions, three quantities). Its four reference levels follow the paper's Table 2:
 
 | Level | A wrong answer is also checked against |
 |---|---|
@@ -129,6 +129,6 @@ The input tables are included (`build_tables.py` rebuilds them from the original
 
 ## License
 
-The code is licensed under the [Apache License 2.0](LICENSE). Anyone who redistributes it, modified or not, must keep the `LICENSE` and `NOTICE` files, which carry the GT-FENG name and its author. The license grants no right to use the name GT-FENG for other products.
+The code is licensed under the [Apache License 2.0](https://github.com/VonFlair/gtfeng/blob/main/LICENSE). Anyone who redistributes it, modified or not, must keep the `LICENSE` and `NOTICE` files, which carry the GT-FENG name and its author. The license grants no right to use the name GT-FENG for other products.
 
 The example data in `examples/medicaid/` are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The gold values are derived from MACPAC MACStats Exhibits 35–36.
