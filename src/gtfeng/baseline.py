@@ -65,7 +65,7 @@ def feng_values(result, family: Iterable[str], *, increments: Sequence[float] = 
         values = []
         for i in increments:
             key = context["compare"](float(answer) + i)
-            if key == gold:   # an increment that reaches the correct value is dropped for this item
+            if key in gold:   # an increment that reaches the correct value is dropped for this item
                 continue
             values.append(find_matches(key, item, asked_index, references, coordinates,
                                        context["initials"], context["level_by_shift"]))

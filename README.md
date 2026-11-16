@@ -63,7 +63,7 @@ Rule numbers follow the [GT-FENG paper](https://arxiv.org/abs/2611.18279).
 | Paper | `gtfeng` |
 |---|---|
 | Stability | an item enters only when all repeats give the same answer (`result.unstable` lists the rest) |
-| Rule 1, correct | `label == "correct"` |
+| Rule 1, correct | `label == "correct"`; several rows at the asked index (e.g. spellings of one answer) are all accepted |
 | Rules 2–3, matches and U | `matches`; `label == "U"` when nothing matches |
 | Rule 4, shift | `shifts`, e.g. `J`, `T`, `JD`, `JT` |
 | Rule 5, label and ambiguity | single shift, or `ambiguous {...}` (shift ambiguity); `n_sources` counts distinct sources, so source ambiguity is `n_sources >= 2` (documented rules that differ only in time are one source) |
@@ -113,9 +113,13 @@ python run_example.py
 
 The input tables are included (`build_tables.py` rebuilds them from the original paper's supplementary materials), and `run_example.py` shows how to set reference levels with `level_by_shift` and limit rules with `scope`. The test suite checks that the output equals the paper's Table 3 and that Rule 7 reproduces the local perturbation baseline of the Medicaid instance.
 
+## Example: SituatedQA
+
+[`examples/situatedqa/`](https://github.com/VonFlair/gtfeng/tree/main/examples/situatedqa) reproduces the paper's check on the geographic questions of SituatedQA (Zhang and Choi, 2021): text answers, one coordinate (location), several accepted spellings per gold answer. The SituatedQA data are not included; the example explains how to download them.
+
 ## Citation
 
-`gtfeng.cite()` returns the BibTeX entry (`gtfeng.cite("text")` a plain reference), and `result.report_markdown()` signs every report with "Evaluated with GT-FENG v0.1.0 (Feng, 2026)." If you use GT-FENG, please cite:
+`gtfeng.cite()` returns the BibTeX entry (`gtfeng.cite("text")` a plain reference), and `result.report_markdown()` signs every report with "Evaluated with GT-FENG v0.1.1 (Feng, 2026)." If you use GT-FENG, please cite:
 
 ```bibtex
 @article{feng2026gtfeng,

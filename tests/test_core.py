@@ -135,5 +135,18 @@ class TestFengValue(unittest.TestCase):
             gtfeng.evaluate(answers, refs).feng_value(["J"])
 
 
+class TestSeveralGoldValues(unittest.TestCase):
+    def test_any_documented_value_at_the_asked_index_is_correct(self):
+        # Two rows at index (q, A) give two accepted spellings; either one is correct (Rule 1).
+        refs = pd.DataFrame([("q", "A", 2021, "x", "cbs"), ("q", "A", 2021, "x", "on cbs"),
+                             ("q", "B", 2021, "x", "channel 5")],
+                            columns=["quantity", "jurisdiction", "time", "definition", "value"])
+        answers = pd.DataFrame([{"quantity": "q", "jurisdiction": "A", "time": 2021, "definition": "x", "answer": a,
+                                 "model": a} for a in ("on cbs", "channel 5")])
+        items = gtfeng.evaluate(answers, refs, groups=["model"]).items.set_index("model")
+        self.assertEqual(items.loc["on cbs", "label"], "correct")
+        self.assertEqual(items.loc["channel 5", "label"], "J")
+
+
 if __name__ == "__main__":
     unittest.main()

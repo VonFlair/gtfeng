@@ -53,18 +53,19 @@ class ReferenceSet:
                 scope={item_column: row[ref_column] for ref_column, item_column in scope.items()
                        if not is_missing(row[ref_column])},
             ))
-        self._gold: dict[tuple, object] = {}
+        self._gold: dict[tuple, set] = {}
         self._by_value: dict[object, list[DocumentedRule]] = {}
         for rule in self.rules:
-            self._gold.setdefault(rule.index, rule.value_key)  # if an index appears twice, the first row is gold
+            # several rows at one index give several accepted gold values (e.g. aliases of one answer)
+            self._gold.setdefault(rule.index, set()).add(rule.value_key)
             self._by_value.setdefault(rule.value_key, []).append(rule)
 
-    def gold(self, index: tuple):
-        """G at an index: the value of the documented rule at that index."""
+    def gold(self, index: tuple) -> frozenset:
+        """G at an index: the accepted values of the documented rules at that index (usually one value)."""
         if index not in self._gold:
             raise KeyError(f"no documented rule with a value at the asked index {index}; "
                            "every question needs a gold value in the references table")
-        return self._gold[index]
+        return frozenset(self._gold[index])
 
     def rules_with_value(self, value_key) -> list[DocumentedRule]:
         """Every documented rule whose value equals `value_key`."""

@@ -2,7 +2,7 @@
 # Copyright 2026 Jiayu Feng
 """GT-FENG Rules 1-6, one function per rule, in the order of the paper.
 
-Rule 1  Correct      the answer equals the gold value at the asked index.
+Rule 1  Correct      the answer equals the gold value at the asked index (any of them, if several rows give one).
 Rule 2  Matches      otherwise, M = every other documented rule whose value equals the answer.
 Rule 3  Unmatched    if M is empty, the answer is labeled U.
 Rule 4  Shift        the coordinates in which a match differs from the asked index, as initials (J, T, JD, ...).
@@ -45,7 +45,7 @@ def coordinate_initials(coordinates: Sequence[str]) -> dict[str, str]:
 
 def is_correct(answer_key, asked_index: tuple, references: ReferenceSet) -> bool:
     """Rule 1."""
-    return answer_key == references.gold(asked_index)
+    return answer_key in references.gold(asked_index)
 
 
 def shift(rule_index: tuple, asked_index: tuple, coordinates: Sequence[str], initials: Mapping[str, str]) -> str:
