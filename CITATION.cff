@@ -13,4 +13,9 @@ preferred-citation:
     - family-names: Feng
       given-names: Jiayu
   year: 2026
-  # arXiv identifier to be added after announcement
+  journal: "arXiv preprint arXiv:2611.18279"
+  url: "https://arxiv.org/abs/2611.18279"
+  identifiers:
+    - type: other
+      value: "arXiv:2611.18279"
+      description: arXiv identifier

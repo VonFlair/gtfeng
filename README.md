@@ -1,6 +1,6 @@
 # gtfeng
 
-**GT-FENG (General Theory of Factual Evaluation and Normative Grounding)** evaluates language-model answers about facts whose correct value is set by a rule: an income limit, a filing deadline, a legal duty. The same answer can be right under one jurisdiction, date, or definition and wrong under another. `gtfeng` scores each answer against the rule that applies and lists every documented rule that matches a wrong answer.
+**GT-FENG (General Theory of Factual Evaluation and Normative Grounding)** evaluates language-model answers about facts whose correct value is set by a rule: an income limit, a filing deadline, a legal duty. The same answer can be right under one jurisdiction, date, or definition and wrong under another. `gtfeng` scores each answer against the rule that applies and lists every documented rule that matches a wrong answer. Paper: [arXiv:2611.18279](https://arxiv.org/abs/2611.18279).
 
 Use it when you evaluate model answers about numbers, dates, or yes/no facts set by law or policy, and you want to know whether a wrong answer is the correct value for another state, another year, or another definition.
 
@@ -58,7 +58,7 @@ Coordinates are configurable (`coordinates=[...]`); each must have a distinct in
 
 ## What it computes
 
-Rule numbers follow the GT-FENG paper (see [Citation](#citation)).
+Rule numbers follow the [GT-FENG paper](https://arxiv.org/abs/2611.18279).
 
 | Paper | `gtfeng` |
 |---|---|
@@ -119,9 +119,11 @@ The input tables are included (`build_tables.py` rebuilds them from the original
 
 ```bibtex
 @article{feng2026gtfeng,
-  title  = {GT-FENG: General Theory of Factual Evaluation and Normative Grounding in Language Models},
-  author = {Feng, Jiayu},
-  year   = {2026}
+  title   = {GT-FENG: General Theory of Factual Evaluation and Normative Grounding in Language Models},
+  author  = {Feng, Jiayu},
+  journal = {arXiv preprint arXiv:2611.18279},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2611.18279}
 }
 ```
 

@@ -11,13 +11,18 @@ requires-python = ">=3.9"
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE"]
 authors = [{ name = "Jiayu Feng" }]
-dependencies = ["pandas>=1.5"]
+dependencies = ["pandas>=1.5", "numpy"]
 keywords = ["language models", "evaluation", "factuality", "law", "policy", "temporal", "jurisdiction"]
 classifiers = [
   "Programming Language :: Python :: 3",
   "Intended Audience :: Science/Research",
   "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
+
+[project.urls]
+Homepage = "https://github.com/VonFlair/gtfeng"
+Paper = "https://arxiv.org/abs/2611.18279"
+"Medicaid study" = "https://arxiv.org/abs/2610.09458"
 
 [tool.setuptools.packages.find]
 where = ["src"]
