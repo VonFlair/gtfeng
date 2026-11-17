@@ -1,4 +1,4 @@
-"""Reproduce the GT-FENG standard report for the Medicaid instance (paper Section 6, Table 3).
+"""Reproduce the GT-FENG standard report for the Medicaid instance (paper Section 6, Table 3 of arXiv:2611.18279v2).
 
 usage: python run_example.py   (the tables are included; build_tables.py rebuilds them)
 """

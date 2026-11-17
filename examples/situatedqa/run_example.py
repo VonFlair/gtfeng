@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright 2026 Jiayu Feng
-"""Reproduce the GT-FENG check on the geographic SituatedQA test set (paper Section 7, Table 6).
+"""Reproduce the GT-FENG check on the geographic SituatedQA test set (paper Section 7, Table 6 of arXiv:2611.18279v2).
 
 usage: python run_example.py   (run build_tables.py first)
 

@@ -1,6 +1,6 @@
 # SituatedQA example
 
-Reproduces the GT-FENG check on the geographic test set of SituatedQA (paper Section 7, Table 6): 506
+Reproduces the GT-FENG check on the geographic test set of SituatedQA (paper Section 7, Table 6 of arXiv:2611.18279v2): 506
 question–location pairs, two models, two repeats each.
 
 The SituatedQA data are not included. Download `data/qa_data/geo.test.jsonl` from

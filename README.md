@@ -68,7 +68,7 @@ Rule numbers follow the [GT-FENG paper](https://arxiv.org/abs/2611.18279).
 | Rule 4, shift | `shifts`, e.g. `J`, `T`, `JD`, `JT` |
 | Rule 5, label and ambiguity | single shift, or `ambiguous {...}` (shift ambiguity); `n_sources` counts distinct sources, so source ambiguity is `n_sources >= 2` (documented rules that differ only in time are one source) |
 | Rule 6, reference levels | `level` column (level k means R_k); extension `level_by_shift`, e.g. `{"T": 2}` holds matches with shift T back until level 2 |
-| Rule 7, local perturbation baseline | `result.feng_value(family)`: O, N, E, the FENG value, and p |
+| Rule 7, local perturbation baseline | `result.feng_value(family)`: O, N, E, the FENG value, and p; `bootstrap=10000` adds a 95% confidence interval |
 | Standard report | `result.report(families=...)`: correct, U, single-shift labels, shift-ambiguous, source-ambiguous, mean sources per matched item, and O for each family |
 
 Extension `scope={"ref_column": "answer_coordinate"}` restricts a documented rule to items whose coordinate equals the rule's value in that column.
@@ -78,8 +78,8 @@ Extension `scope={"ref_column": "answer_coordinate"}` restricts a documented rul
 For a family of shifts F, `result.feng_value(F)` compares how often wrong answers are grounded in F with how often nearby values are:
 
 ```python
-result.feng_value(["J", "JD"])     # one row per group and reference level
-#  W  O      N     E  feng_value       p
+result.feng_value(["J", "JD"], bootstrap=10000)   # one row per group and reference level
+#  W  O      N     E  feng_value       p  ci_low  ci_high
 ```
 
 | Column | Meaning |
@@ -90,14 +90,23 @@ result.feng_value(["J", "JD"])     # one row per group and reference level
 | `E` | O − N |
 | `feng_value` | (O − N) / (W − N); NaN when N ≥ W |
 | `p` | share of random perturbations (one increment per item) whose grounded count reaches O |
+| `ci_low`, `ci_high` | with `bootstrap=B`: percentile interval (level `ci`, default 0.95) of the FENG value over B resamples of the group's stable items |
 
 The FENG value is 0 when wrong answers are grounded in F as often as nearby values, 1 when every wrong answer is grounded in F, and negative when nearby values are grounded more often. It has the chance-corrected form of Cohen's kappa; the match event and the local baseline come from GT-FENG. Rule 7 needs numeric answers, and the increments must leave out any known definition shift (the Medicaid example leaves out 5).
+
+`result.feng_bootstrap(F)` returns the resampled FENG values themselves. Resample d uses the same items at every reference level, so the difference between two levels has an interval too:
+
+```python
+boot = result.feng_bootstrap(["J", "JD"])
+wide = boot.pivot_table(index=["model", "resample"], columns="level", values="feng_value")
+(wide[1] - wide[4]).groupby("model").quantile([0.025, 0.975])   # drop from R1 to R4
+```
 
 Report the FENG value next to accuracy: it describes the structure of wrong answers and does not rank models.
 
 ## Example: Medicaid income limits
 
-[`examples/medicaid/`](https://github.com/VonFlair/gtfeng/tree/main/examples/medicaid) (in the GitHub repository) reproduces the paper's Medicaid instance (two models, 51 jurisdictions, three quantities). The data come from [*Right Number, Wrong State?*](https://arxiv.org/abs/2610.09458) (Feng, 2026); if you use them, please cite that paper as well. Its four reference levels follow the paper's Table 2:
+[`examples/medicaid/`](https://github.com/VonFlair/gtfeng/tree/main/examples/medicaid) (in the GitHub repository) reproduces the paper's Medicaid instance (two models, 51 jurisdictions, three quantities). The data come from [*Right Number, Wrong State?*](https://arxiv.org/abs/2610.09458) (Feng, 2026); if you use them, please cite that paper as well. Its four reference levels follow Table 2 of the paper:
 
 | Level | A wrong answer is also checked against |
 |---|---|
@@ -111,7 +120,7 @@ cd examples/medicaid
 python run_example.py
 ```
 
-The input tables are included (`build_tables.py` rebuilds them from the original paper's supplementary materials), and `run_example.py` shows how to set reference levels with `level_by_shift` and limit rules with `scope`. The test suite checks that the output equals the paper's Table 3 and that Rule 7 reproduces the local perturbation baseline of the Medicaid instance.
+The input tables are included (`build_tables.py` rebuilds them from the original paper's supplementary materials), and `run_example.py` shows how to set reference levels with `level_by_shift` and limit rules with `scope`. The test suite checks that the output equals Table 3 of arXiv:2611.18279v2 and that Rule 7 reproduces the local perturbation baseline of the Medicaid instance.
 
 ## Example: SituatedQA
 

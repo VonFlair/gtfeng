@@ -1,4 +1,4 @@
-"""Regression test: the package reproduces the paper's SituatedQA check (Section 7, Table 6).
+"""Regression test: the package reproduces the paper's SituatedQA check (Section 7, Table 6 of arXiv:2611.18279v2).
 
 Needs the tables built by examples/situatedqa/build_tables.py (the SituatedQA data are not redistributed)."""
 import runpy

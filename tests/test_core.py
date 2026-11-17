@@ -126,6 +126,29 @@ class TestFengValue(unittest.TestCase):
         row = fv.iloc[0]
         self.assertEqual((row.O, row.N, row.E), (0, 1.0, -1.0))
 
+    def test_bootstrap_interval(self):
+        # One stable item: every resample repeats it, so the interval collapses to the point value.
+        fv = gtfeng.evaluate(self.ask(40), self.refs).feng_value(["J"], increments=[-1, 1], permutations=100,
+                                                                 bootstrap=200)
+        row = fv.iloc[0]
+        self.assertEqual((row.ci_low, row.ci_high), (1.0, 1.0))
+
+    def test_bootstrap_same_items_at_every_level(self):
+        refs = pd.DataFrame(
+            [("limit", j, 2025, "x", v, lv) for j, v, lv in
+             [("A", 50, 1), ("B", 40, 1), ("C", 30, 1), ("D", 20, 1), ("A2", 60, 2)]],
+            columns=["quantity", "jurisdiction", "time", "definition", "value", "level"])
+        asked = [("A", 40), ("B", 30), ("C", 20), ("D", 50), ("A2", 60)]
+        answers = pd.DataFrame([{"quantity": "limit", "jurisdiction": j, "time": 2025, "definition": "x",
+                                 "answer": a} for j, a in asked])
+        result = gtfeng.evaluate(answers, refs)
+        draws = result.feng_bootstrap(["J"], increments=[-1, 1], resamples=300, seed=1)
+        self.assertEqual(len(draws), 2 * 300)
+        again = result.feng_bootstrap(["J"], increments=[-1, 1], resamples=300, seed=1)
+        pd.testing.assert_frame_equal(draws, again)
+        fv = result.feng_value(["J"], increments=[-1, 1], permutations=100, bootstrap=300, seed=1)
+        self.assertTrue(((fv.ci_low <= fv.feng_value) & (fv.feng_value <= fv.ci_high)).all())
+
     def test_numeric_answers_only(self):
         refs = pd.DataFrame([("rule", "A", 2025, "x", "yes"), ("rule", "B", 2025, "x", "no")],
                             columns=["quantity", "jurisdiction", "time", "definition", "value"])

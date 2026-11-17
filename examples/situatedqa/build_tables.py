@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright 2026 Jiayu Feng
-"""Build the GT-FENG tables for the SituatedQA check (paper Section 7, Table 6).
+"""Build the GT-FENG tables for the SituatedQA check (paper Section 7, Table 6 of arXiv:2611.18279v2).
 
 usage: python build_tables.py GEO_TEST_JSONL RUN_DIR [OUT_DIR]
 GEO_TEST_JSONL  SituatedQA data/qa_data/geo.test.jsonl (download it from github.com/mikejqzhang/SituatedQA;

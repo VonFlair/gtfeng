@@ -22,7 +22,7 @@ from typing import Callable, Iterable, Mapping, Sequence
 
 import pandas as pd
 
-from .baseline import DEFAULT_INCREMENTS, feng_values
+from .baseline import DEFAULT_INCREMENTS, feng_bootstrap, feng_values
 from .references import ReferenceSet
 from .report import standard_report, to_markdown
 from .rules import CORRECT, coordinate_initials, count_sources, find_matches, is_correct, label
@@ -53,13 +53,22 @@ class Result:
         return to_markdown(self.report(families))
 
     def feng_value(self, family: Iterable[str], *, increments: Sequence[float] = DEFAULT_INCREMENTS,
-                   permutations: int = 10000, seed: int = 0) -> pd.DataFrame:
+                   permutations: int = 10000, seed: int = 0, bootstrap: int = 0,
+                   ci: float = 0.95) -> pd.DataFrame:
         """Rule 7 and the FENG value for a family, e.g. ["J", "JD"]; one row per group and level.
 
         Columns: W (wrong items), O (grounded in the family), N (local perturbation baseline), E = O - N,
-        feng_value = (O - N) / (W - N), and p. Numeric answers only; see gtfeng.baseline.
+        feng_value = (O - N) / (W - N), and p. With bootstrap=B (e.g. 10000), also ci_low and ci_high, the
+        percentile bootstrap interval over the group's stable items. Numeric answers only; see gtfeng.baseline.
         """
-        return feng_values(self, family, increments=increments, permutations=permutations, seed=seed)
+        return feng_values(self, family, increments=increments, permutations=permutations, seed=seed,
+                           bootstrap=bootstrap, ci=ci)
+
+    def feng_bootstrap(self, family: Iterable[str], *, increments: Sequence[float] = DEFAULT_INCREMENTS,
+                       resamples: int = 10000, seed: int = 0) -> pd.DataFrame:
+        """Bootstrap resamples of the FENG value (one row per group, level, and resample), for custom intervals,
+        e.g. the difference between two levels."""
+        return feng_bootstrap(self, family, increments=increments, resamples=resamples, seed=seed)
 
 
 def evaluate(answers: pd.DataFrame, references: pd.DataFrame, *,
