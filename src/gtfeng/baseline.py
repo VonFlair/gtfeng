@@ -21,7 +21,8 @@ form of Cohen's kappa; the match event and the local baseline come from GT-FENG.
 
 Confidence interval: the stable items of each group are resampled with replacement, the FENG value is recomputed on
 every resample, and the interval is the percentile interval of the resampled values. Resample d uses the same items
-at every reference level, so `feng_bootstrap` also gives intervals for differences between levels.
+at every reference level, so `feng_bootstrap` also gives intervals for differences between levels. With
+cluster="jurisdiction", whole jurisdictions are resampled, which keeps the dependence among items of one jurisdiction.
 """
 from __future__ import annotations
 
@@ -104,17 +105,28 @@ def _feng(w, o, n):
 
 
 def feng_bootstrap(result, family: Iterable[str], *, increments: Sequence[float] = DEFAULT_INCREMENTS,
-                   resamples: int = 10000, seed: int = 0) -> pd.DataFrame:
+                   resamples: int = 10000, seed: int = 0, cluster: str | None = None) -> pd.DataFrame:
     """Bootstrap resamples of the FENG value: one row per group, level, and resample.
 
     The stable items of each group are resampled with replacement; resample d uses the same items at every level.
+    cluster  a column of result.items (e.g. "jurisdiction"): resample its values instead of single items, keeping all
+             items of a drawn value together.
     """
     keys, scores = _item_scores(result, family, increments)
+    labels = None
+    if cluster is not None:
+        if cluster not in result.items.columns:
+            raise KeyError(f"result.items lacks column {cluster!r}")
+        labels = {kv if isinstance(kv, tuple) else (kv,): g[cluster].to_numpy()
+                  for kv, g in result.items.groupby(keys, sort=True)}
     rng = np.random.default_rng(seed)
     indices = {}
     frames = []
     for key_values, (w, o, hits) in scores.items():
         n = np.array([h.mean() if len(h) else 0.0 for h in hits])
+        if labels is not None:   # totals per cluster, then resample clusters
+            per = pd.DataFrame({"c": labels[key_values], "w": w, "o": o, "n": n}).groupby("c", sort=True).sum()
+            w, o, n = per.w.to_numpy(), per.o.to_numpy(), per.n.to_numpy()
         group = key_values[:-1]
         if group not in indices:
             indices[group] = rng.integers(len(w), size=(resamples, len(w)))
@@ -128,11 +140,11 @@ def feng_bootstrap(result, family: Iterable[str], *, increments: Sequence[float]
 
 def feng_values(result, family: Iterable[str], *, increments: Sequence[float] = DEFAULT_INCREMENTS,
                 permutations: int = 10000, seed: int = 0, bootstrap: int = 0,
-                ci: float = 0.95) -> pd.DataFrame:
+                ci: float = 0.95, cluster: str | None = None) -> pd.DataFrame:
     """Rule 7 and the FENG value, one row per group and reference level. Numeric answers only.
 
     bootstrap  number of bootstrap resamples. When positive, adds ci_low and ci_high, the percentile interval at
-               level `ci` (see feng_bootstrap, run with the same seed).
+               level `ci` (see feng_bootstrap, run with the same seed and `cluster`).
     """
     keys, scores = _item_scores(result, family, increments)
     rng = np.random.default_rng(seed)
@@ -152,7 +164,7 @@ def feng_values(result, family: Iterable[str], *, increments: Sequence[float] = 
                      "p": float((draws >= observed).mean())})
     out = pd.DataFrame(rows)
     if bootstrap > 0:
-        boot = feng_bootstrap(result, family, increments=increments, resamples=bootstrap, seed=seed)
+        boot = feng_bootstrap(result, family, increments=increments, resamples=bootstrap, seed=seed, cluster=cluster)
         alpha = (1 - ci) / 2
         bounds = boot.groupby(keys).feng_value.quantile([alpha, 1 - alpha]).unstack()
         bounds.columns = ["ci_low", "ci_high"]

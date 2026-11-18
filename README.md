@@ -90,7 +90,7 @@ result.feng_value(["J", "JD"], bootstrap=10000)   # one row per group and refere
 | `E` | O − N |
 | `feng_value` | (O − N) / (W − N); NaN when N ≥ W |
 | `p` | share of random perturbations (one increment per item) whose grounded count reaches O |
-| `ci_low`, `ci_high` | with `bootstrap=B`: percentile interval (level `ci`, default 0.95) of the FENG value over B resamples of the group's stable items |
+| `ci_low`, `ci_high` | with `bootstrap=B`: percentile interval (level `ci`, default 0.95) of the FENG value over B resamples of the group's stable items; with `cluster="jurisdiction"`, whole jurisdictions are resampled |
 
 The FENG value is 0 when wrong answers are grounded in F as often as nearby values, 1 when every wrong answer is grounded in F, and negative when nearby values are grounded more often. It has the chance-corrected form of Cohen's kappa; the match event and the local baseline come from GT-FENG. Rule 7 needs numeric answers, and the increments must leave out any known definition shift (the Medicaid example leaves out 5).
 
@@ -122,13 +122,17 @@ python run_example.py
 
 The input tables are included (`build_tables.py` rebuilds them from the original paper's supplementary materials), and `run_example.py` shows how to set reference levels with `level_by_shift` and limit rules with `scope`. The test suite checks that the output equals Table 3 of arXiv:2611.18279v2 and that Rule 7 reproduces the local perturbation baseline of the Medicaid instance.
 
+
+## Example: unemployment insurance
+
+[`examples/unemployment_insurance/`](https://github.com/VonFlair/gtfeng/tree/main/examples/unemployment_insurance) (in the GitHub repository) is the paper's second instance: 51 jurisdictions × 3 quantities (maximum and minimum weekly benefit amount, taxable wage base) as of January 2026, with documented values from the U.S. Department of Labor's *Significant Provisions of State Unemployment Insurance Laws*, 2018–2026. `run_example.py` prints the standard report and the FENG value with intervals from `cluster="jurisdiction"`; the test suite checks the paper's numbers.
 ## Example: SituatedQA
 
 [`examples/situatedqa/`](https://github.com/VonFlair/gtfeng/tree/main/examples/situatedqa) reproduces the paper's check on the geographic questions of SituatedQA (Zhang and Choi, 2021): text answers, one coordinate (location), several accepted spellings per gold answer. The SituatedQA data are not included; the example explains how to download them.
 
 ## Citation
 
-`gtfeng.cite()` returns the BibTeX entry (`gtfeng.cite("text")` a plain reference), and `result.report_markdown()` signs every report with "Evaluated with GT-FENG v0.1.1 (Feng, 2026)." If you use GT-FENG, please cite:
+`gtfeng.cite()` returns the BibTeX entry (`gtfeng.cite("text")` a plain reference), and `result.report_markdown()` signs every report with "Evaluated with GT-FENG v0.1.2 (Feng, 2026)." If you use GT-FENG, please cite:
 
 ```bibtex
 @article{feng2026gtfeng,

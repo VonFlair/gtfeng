@@ -9,7 +9,7 @@ import pandas as pd
 
 from .rules import CORRECT, UNMATCHED
 
-VERSION = "0.1.1"
+VERSION = "0.1.2"
 SIGNATURE = f"Evaluated with GT-FENG v{VERSION} (Feng, 2026)."
 BIBTEX = """@article{feng2026gtfeng,
   title   = {GT-FENG: General Theory of Factual Evaluation and Normative Grounding in Language Models},

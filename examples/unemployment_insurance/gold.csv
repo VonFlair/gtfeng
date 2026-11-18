@@ -1,0 +1,154 @@
+quantity,jurisdiction,gold,gold_values
+wage_base,Alabama,80.0,80.0
+wage_base,Alaska,542.0,542.0
+wage_base,Arizona,80.0,80.0
+wage_base,Arkansas,70.0,70.0
+wage_base,California,70.0,70.0
+wage_base,Colorado,306.0,306.0
+wage_base,Connecticut,270.0,270.0
+wage_base,Delaware,145.0,145.0
+wage_base,District of Columbia,90.0,90.0
+wage_base,Florida,70.0,70.0
+wage_base,Georgia,95.0,95.0
+wage_base,Hawaii,645.0,645.0
+wage_base,Idaho,583.0,583.0
+wage_base,Illinois,142.5,142.5
+wage_base,Indiana,95.0,95.0
+wage_base,Iowa,204.0,204.0
+wage_base,Kansas,151.0,151.0
+wage_base,Kentucky,120.0,120.0
+wage_base,Louisiana,70.0,70.0
+wage_base,Maine,120.0,120.0
+wage_base,Maryland,85.0,85.0
+wage_base,Massachusetts,150.0,150.0
+wage_base,Michigan,90.0,90.0
+wage_base,Minnesota,440.0,440.0
+wage_base,Mississippi,140.0,140.0
+wage_base,Missouri,90.0,90.0
+wage_base,Montana,473.0,473.0
+wage_base,Nebraska,90.0,90.0
+wage_base,Nevada,437.0,437.0
+wage_base,New Hampshire,140.0,140.0
+wage_base,New Jersey,448.0,448.0
+wage_base,New Mexico,348.0,348.0
+wage_base,New York,176.0,176.0
+wage_base,North Carolina,342.0,342.0
+wage_base,North Dakota,466.0,466.0
+wage_base,Ohio,90.0,90.0
+wage_base,Oklahoma,250.0,250.0
+wage_base,Oregon,567.0,567.0
+wage_base,Pennsylvania,100.0,100.0
+wage_base,Rhode Island,308.0,308.0
+wage_base,South Carolina,140.0,140.0
+wage_base,South Dakota,150.0,150.0
+wage_base,Tennessee,70.0,70.0
+wage_base,Texas,90.0,90.0
+wage_base,Utah,507.0,507.0
+wage_base,Vermont,154.0,154.0
+wage_base,Virginia,80.0,80.0
+wage_base,Washington,782.0,782.0
+wage_base,West Virginia,95.0,95.0
+wage_base,Wisconsin,140.0,140.0
+wage_base,Wyoming,338.0,338.0
+wba_max,Alabama,275.0,275.0
+wba_max,Alaska,370.0,370.0
+wba_max,Arizona,320.0,320.0
+wba_max,Arkansas,451.0,451.0
+wba_max,California,450.0,450.0
+wba_max,Colorado,767.0,767.0 844.0
+wba_max,Connecticut,721.0,721.0
+wba_max,Delaware,450.0,450.0
+wba_max,District of Columbia,444.0,444.0
+wba_max,Florida,275.0,275.0
+wba_max,Georgia,365.0,365.0
+wba_max,Hawaii,868.0,868.0
+wba_max,Idaho,624.0,624.0
+wba_max,Illinois,628.0,628.0
+wba_max,Indiana,390.0,390.0
+wba_max,Iowa,622.0,622.0
+wba_max,Kansas,637.0,637.0
+wba_max,Kentucky,720.0,720.0
+wba_max,Louisiana,282.0,282.0
+wba_max,Maine,623.0,623.0
+wba_max,Maryland,430.0,430.0
+wba_max,Massachusetts,1105.0,1105.0
+wba_max,Michigan,530.0,530.0
+wba_max,Minnesota,611.0,611.0 948.0
+wba_max,Mississippi,235.0,235.0
+wba_max,Missouri,320.0,320.0
+wba_max,Montana,767.0,767.0
+wba_max,Nebraska,582.0,582.0
+wba_max,Nevada,631.0,631.0
+wba_max,New Hampshire,427.0,427.0
+wba_max,New Jersey,905.0,905.0
+wba_max,New Mexico,624.0,624.0
+wba_max,New York,869.0,869.0
+wba_max,North Carolina,350.0,350.0
+wba_max,North Dakota,815.0,815.0
+wba_max,Ohio,624.0,624.0
+wba_max,Oklahoma,649.0,649.0
+wba_max,Oregon,872.0,872.0
+wba_max,Pennsylvania,605.0,605.0
+wba_max,Rhode Island,745.0,745.0
+wba_max,South Carolina,350.0,350.0
+wba_max,South Dakota,553.0,553.0
+wba_max,Tennessee,325.0,325.0
+wba_max,Texas,605.0,605.0
+wba_max,Utah,806.0,806.0
+wba_max,Vermont,757.0,757.0
+wba_max,Virginia,430.0,430.0
+wba_max,Washington,1152.0,1152.0
+wba_max,West Virginia,662.0,662.0
+wba_max,Wisconsin,370.0,370.0
+wba_max,Wyoming,651.0,651.0
+wba_min,Alabama,45.0,45.0
+wba_min,Alaska,56.0,56.0
+wba_min,Arizona,229.0,229.0
+wba_min,Arkansas,81.0,81.0
+wba_min,California,40.0,40.0
+wba_min,Colorado,25.0,25.0
+wba_min,Connecticut,44.0,44.0
+wba_min,Delaware,20.0,20.0
+wba_min,District of Columbia,50.0,50.0
+wba_min,Florida,32.0,32.0
+wba_min,Georgia,55.0,55.0
+wba_min,Hawaii,5.0,5.0
+wba_min,Idaho,72.0,72.0
+wba_min,Illinois,51.0,51.0
+wba_min,Indiana,37.0,37.0
+wba_min,Iowa,93.0,93.0
+wba_min,Kansas,159.0,159.0
+wba_min,Kentucky,39.0,39.0
+wba_min,Louisiana,35.0,35.0
+wba_min,Maine,108.0,108.0
+wba_min,Maryland,50.0,50.0
+wba_min,Massachusetts,60.0,60.0
+wba_min,Michigan,218.0,218.0
+wba_min,Minnesota,37.0,37.0
+wba_min,Mississippi,30.0,30.0
+wba_min,Missouri,35.0,35.0
+wba_min,Montana,227.0,227.0
+wba_min,Nebraska,70.0,70.0
+wba_min,Nevada,16.0,16.0
+wba_min,New Hampshire,32.0,32.0
+wba_min,New Jersey,186.0,186.0
+wba_min,New Mexico,116.0,116.0
+wba_min,New York,140.0,140.0
+wba_min,North Carolina,15.0,15.0
+wba_min,North Dakota,43.0,43.0
+wba_min,Ohio,176.0,176.0
+wba_min,Oklahoma,16.0,16.0
+wba_min,Oregon,204.0,204.0
+wba_min,Pennsylvania,68.0,68.0
+wba_min,Rhode Island,82.0,82.0
+wba_min,South Carolina,42.0,42.0
+wba_min,South Dakota,28.0,28.0
+wba_min,Tennessee,55.0,55.0
+wba_min,Texas,75.0,75.0
+wba_min,Utah,47.0,47.0
+wba_min,Vermont,94.0,94.0
+wba_min,Virginia,112.0,112.0
+wba_min,Washington,366.0,366.0
+wba_min,West Virginia,24.0,24.0
+wba_min,Wisconsin,54.0,54.0
+wba_min,Wyoming,47.0,47.0

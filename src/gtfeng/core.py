@@ -54,21 +54,22 @@ class Result:
 
     def feng_value(self, family: Iterable[str], *, increments: Sequence[float] = DEFAULT_INCREMENTS,
                    permutations: int = 10000, seed: int = 0, bootstrap: int = 0,
-                   ci: float = 0.95) -> pd.DataFrame:
+                   ci: float = 0.95, cluster: str | None = None) -> pd.DataFrame:
         """Rule 7 and the FENG value for a family, e.g. ["J", "JD"]; one row per group and level.
 
         Columns: W (wrong items), O (grounded in the family), N (local perturbation baseline), E = O - N,
         feng_value = (O - N) / (W - N), and p. With bootstrap=B (e.g. 10000), also ci_low and ci_high, the
-        percentile bootstrap interval over the group's stable items. Numeric answers only; see gtfeng.baseline.
+        percentile bootstrap interval over the group's stable items (or over values of `cluster`, e.g. "jurisdiction").
+        Numeric answers only; see gtfeng.baseline.
         """
         return feng_values(self, family, increments=increments, permutations=permutations, seed=seed,
-                           bootstrap=bootstrap, ci=ci)
+                           bootstrap=bootstrap, ci=ci, cluster=cluster)
 
     def feng_bootstrap(self, family: Iterable[str], *, increments: Sequence[float] = DEFAULT_INCREMENTS,
-                       resamples: int = 10000, seed: int = 0) -> pd.DataFrame:
+                       resamples: int = 10000, seed: int = 0, cluster: str | None = None) -> pd.DataFrame:
         """Bootstrap resamples of the FENG value (one row per group, level, and resample), for custom intervals,
         e.g. the difference between two levels."""
-        return feng_bootstrap(self, family, increments=increments, resamples=resamples, seed=seed)
+        return feng_bootstrap(self, family, increments=increments, resamples=resamples, seed=seed, cluster=cluster)
 
 
 def evaluate(answers: pd.DataFrame, references: pd.DataFrame, *,

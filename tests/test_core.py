@@ -149,6 +149,21 @@ class TestFengValue(unittest.TestCase):
         fv = result.feng_value(["J"], increments=[-1, 1], permutations=100, bootstrap=300, seed=1)
         self.assertTrue(((fv.ci_low <= fv.feng_value) & (fv.feng_value <= fv.ci_high)).all())
 
+    def test_cluster_bootstrap(self):
+        refs = pd.DataFrame(
+            [("limit", j, 2025, "x", v) for j, v in [("A", 50), ("B", 40), ("C", 30), ("D", 20)]],
+            columns=["quantity", "jurisdiction", "time", "definition", "value"])
+        answers = pd.DataFrame([{"quantity": "limit", "jurisdiction": j, "time": 2025, "definition": "x",
+                                 "answer": a, "region": "one"} for j, a in [("A", 40), ("B", 30), ("C", 41)]])
+        result = gtfeng.evaluate(answers, refs, groups=["region"])
+        # One cluster holds every item, so every resample is the full sample and the interval is the point value.
+        fv = result.feng_value(["J"], increments=[-1, 1], permutations=100, bootstrap=200, cluster="region")
+        row = fv.iloc[0]
+        self.assertAlmostEqual(row.ci_low, row.feng_value, places=3)
+        self.assertAlmostEqual(row.ci_high, row.feng_value, places=3)
+        with self.assertRaises(KeyError):
+            result.feng_bootstrap(["J"], cluster="no_such_column")
+
     def test_numeric_answers_only(self):
         refs = pd.DataFrame([("rule", "A", 2025, "x", "yes"), ("rule", "B", 2025, "x", "no")],
                             columns=["quantity", "jurisdiction", "time", "definition", "value"])
